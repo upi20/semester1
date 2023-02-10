@@ -1,0 +1,31 @@
+Tentukan 
+
+Tentukan Kriteria Penilaian
+Nilai tersebut akan dikelompokan ke dalam beberapa golongan, misalnya 3 golongan, yaitu rendah, sedang, tinggi
+Jarak untuk masing-masing golongan tersebut harus sama
+Sehingga, dalam kasus ini:
+
+kolom 1: rendah untuk nilai antara 0 – 3.33, sedang untuk nilai antara 3.33 – 6.66, tinggi untuk nilai antara 6.66 = 10
+kolom 2: rendah untuk nilai antara 0 – 33.33, sedang untuk nilai antara 33.33 – 66.66, tinggi untuk nilai antara 66.66 = 100
+kolom 3: rendah untuk nilai antara 0 – 3.33, sedang untuk nilai antara 3.33 – 6.66, tinggi untuk nilai antara 6.66 = 10
+2. Konversi Skor menjadi Penilaian
+Setelah menentukan kriteria penilaian, maka lakukan konversi skor tersebut.
+Kelompokan skor inputan kedalam golongan rendah / sedang / tinggi sesuai kriteria diatas, kemudian hitung skor fuzzy nya sesuai rumus yang ditentukan
+Rumus dapat dilihat langsung pada perhitungan dibawah.
+Jika sebuah inputan termasuk dalam golongan rendah dan sedang, maka hitunglah skor fuzzy nya sebanyak 2 kali, yaitu untuk skor golongan rendah dan skor golongan sedang.
+4. Tentukan nilai diagram Fuzzy Output
+Fuzzy Output digunakan untuk mengetahui batas skor manakah yang termasuk kelompok LULUS dan TIDAK LULUS
+Contoh dalam kasus ini, skor 0-60 termasuk dalam TIDAK LULUS, dan skor 61-100 termasuk dalam LULUS
+5. Tentukan nilai alpha predikat
+Alpha predikat adalah nilai minimal dari nilai skor fuzzy yang sudah dihitung pada perhitungan sebelumnya.
+3. Tentukan tabel Rule Base System
+Rule Base System adalah tabel yang digunakan untuk menentukan skor fuzzy yang sudah dihitung diatas masuk ke dalam Rule yang mana.
+Hasil output dari setiap rule dapat diganti sesuai kebutuhan
+Contoh Rule Base System adalah:
+
+6. Tentukan nilai Z
+Z adalah konversi nilai Fuzzy Output sesuai dengan tabel Rule Base System yang telah dihitung sebelumnya
+Nilai yang diambil adalah nilai maksimal dari nilai pada Diagram Fuzzy Output
+Pada contoh ini, maka setiap Rule TIDAK LULUS bernilai 60, dan setiap Rule LULUS bernilai 100
+7. Hitung skor akhir
+Skor akhir adalah jumlah dari (nilai alpha predikat * nilai Z) dibagi dengan jumlah (nilai alpha predikat)

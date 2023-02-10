@@ -1,0 +1,17 @@
+==================================================
+Index             : 1
+Domain            : detik.com
+Source            : whois.networksolutions.com
+Status            : Succeed
+Domain Status     : Registered
+Expires On        : 5/28/2020
+Created On        : 5/29/1998
+Last Updated On   : 5/24/2018
+Registered To     : PT. Trans Digital Media
+Private Registration: No
+Email Address     : sarwani@detik.com
+Phone Number      : +62.2179187722
+Registrar URL     : http://networksolutions.com
+Country           : ID
+==================================================
+

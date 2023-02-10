@@ -1,0 +1,350 @@
+
+/* gettext library */
+
+var catalog = new Array();
+
+function pluralidx(n) {
+  var v=0;
+  if (typeof(v) == 'boolean') {
+    return v ? 1 : 0;
+  } else {
+    return v;
+  }
+}
+catalog['%(sel)s of %(cnt)s selected'] = [''];
+catalog['%(sel)s of %(cnt)s selected'][0] = '%(sel)s dari %(cnt)s dipilih';
+catalog['0,01 PB/mo.'] = '0,01 PB/mo.';
+catalog['0,18 PB/mo.'] = '0,18 PB/mo.';
+catalog['1 Billion'] = '1,5 Miliar';
+catalog['1 PB/mo.'] = '1 PB/mo.';
+catalog['1,477 PB/mo.'] = '1.477 PB/mo.';
+catalog['1.02 Billion'] = '1,02 Miliar';
+catalog['1.37 Billion'] = '1,37 Miliar';
+catalog['1.5 Billion'] = '1,5 Miliar';
+catalog['1.80 Billion'] = '1,80 Miliar';
+catalog['10,000 PB/mo.'] = '10.000 PB/mo.';
+catalog['100 Million'] = '100 Juta';
+catalog['117.70 Million'] = '117,70 Juta';
+catalog['14,414 PB/mo.'] = '14.414 PB/mo.';
+catalog['15 Sept 1997: Google.com is\nregistered as a domain'] = '15 Sept 1997: Google.com\ndidaftarkan sebagai domain';
+catalog['1998: First Google index has 26\nmillion pages'] = '1998: Indeks Google pertama memiliki 26\njuta laman';
+catalog['2 Billion'] = '1,02 Miliar';
+catalog['2.27 Billion'] = '2,27 Miliar';
+catalog['20,000 PD/mo.'] = '20.000 PD/mo.';
+catalog['2000: Google index reached the 1\nbillion mark'] = '2000: Indeks Google mencapai angka 1\nmiliar';
+catalog['2007: 6 hours of video are uploaded\nper minute on YouTube'] = '2007: 6 jam video diunggah\nper menitnya ke YouTube';
+catalog['2008: There are 1 trillion (as in\n1,000,000,000,000) unique URLs on\nthe web at once'] = '2008: Ada 1 triliun (seperti dalam\n1.000.000.000.000) URL unik\ndi web sekaligus';
+catalog['2009: Every minute, 270,000 words\nare written on Blogger'] = '2009: Setiap menit, 270.000 kata\nditulis di Blogger';
+catalog['27,483 PB/mo.'] = '27.483 PB/mo.';
+catalog['276.95 Million'] = '276,95 Juta';
+catalog['28 PB/mo.'] = '28 PB/bln.';
+catalog['3,992 PB/mo.'] = '3.992 PB/mo.';
+catalog['39.14 Million'] = '39,14 Juta';
+catalog['405 PB/mo.'] = '405 PB/mo.';
+catalog['497.58 Million'] = '497,58 Juta';
+catalog['5,000 PB/mo.'] = '5.000 PB/mo.';
+catalog['5.4 PB/mo.'] = '5,4 PB/mo.';
+catalog['5.4PB is equivalent to\ndata that can fit into\nmore than 1.2 million\nstandard DVDs'] = '5,4 PB setara dengan\ndata yang diisi ke lebih\ndari 1,2 juta DVD\nstandar';
+catalog['500 Million'] = '500 Juta';
+catalog['500 PB/mo.'] = '500 PB/mo.';
+catalog['6 a.m.'] = '6 pagi';
+catalog['770.74 Million'] = '770,74 Juta';
+catalog['9.99 Million'] = '9,99 Juta';
+catalog['A JavaScript API for\nrendering interactive 3D graphics\nin the browser, without\nthe need for additional\nsoftware or plugins.'] = 'API JavaScript untuk merender\ngrafis 3D interaktif di browser,\ntanpa memerlukan perangkat\nlunak atau plugin tambahan.';
+catalog['A flexible layout mode which\nallows for designing and laying\nout more complex applications\nand webpages.'] = 'Mode tata letak yang fleksibel\nyang memungkinkan perancangan\ndan peletakan aplikasi dan laman\nweb yang lebih kompleks.';
+catalog['A group of interrelated web\ndevelopment methods\nused to create interactives\nweb applications'] = 'Kelompok metode pengembangan\nweb yang saling berhubungan yang\ndigunakan untuk membuat aplikasi\nweb interaktif';
+catalog['A high-level JavaScript API\nfor processing and synthesizing\naudio in web applications'] = 'API JavaScript tingkat tinggi\nuntuk memproses dan\nmenyintesis audio dalam\naplikasi web';
+catalog['A layout mode which is designed\nfor laying out more complex\napplications and webpages'] = 'Mode tata letak yang dirancang\nuntuk meletakkan aplikasi dan\nlaman web yang lebih kompleks';
+catalog['A mechanism to prevent\nsome of the more severe\nweb-based attacks against\nusers and websites.'] = 'Mekanisme untuk mencegah\nbeberapa serangan berbasis web\nyang lebih serius terhadap\npengguna dan situs web.';
+catalog['A method to easily\ngenerate an image that\nsmoothly fades from one\ncolor to another.'] = 'Metode untuk membuat gambar\nyang memudar dengan halus\ndari satu warna ke warna lain\nsecara mudah.';
+catalog['A multimedia platform\nused to add animation,\nvideo, and interactivity to\nweb pages.'] = 'Platform multimedia\nyang digunakan untuk menambahkan animasi,\nvideo, dan interaktivitas ke\nlaman web.';
+catalog['A networking protocol for\ndistributed, collaborative,\nhypermedia information\nsystems'] = 'Protokol jaringan untuk sistem\ninformasi hypermedia\nkolaboratif dan terdistribusi';
+catalog['A prototype-based, object-\noriented scripting language'] = 'Bahasa skrip berorientasi pada\nobjek dan berbasis prototipe';
+catalog['A set of rules for encoding\ndocuments in machine-\nreadable form'] = 'Seperangkat aturan untuk\nmengkodekan dokumen\ndalam bentuk yang dapat\ndibaca komputer';
+catalog['A small piece of data sent by\nwebsites and stored in a user\'s\nweb browser to remember the\nwebsite\'s state or past user\nactivity'] = 'Potongan kecil data yang dikirimkan\noleh situs web dan disimpan dalam\nbrowser web pengguna untuk\nmengingat status situs web atau\naktivitas pengguna di masa lalu';
+catalog['A specification language for\nrecursive descent parsers,\nsemantic analyzers and code\ngenerators'] = 'Bahasa spesifikasi untuk\nparser lawas yang rekursif,\npenganalisis semantik,\ndan penghasil kode';
+catalog['A stylesheet language used\nto describe the presentation\nsemantics of a document'] = 'Bahasa style sheet yang digunakan\nuntuk mendeskripsikan semantik\npresentasi sebuah dokumen';
+catalog['A way of processing an element\'s\nrendering before it is displayed\nin the document. Filters can\napply effects such as blurring and\nwarping before the compositing stage.'] = 'Sebuah cara memproses perenderan\nelemen sebelum ditampilkan dalam\ndokumen. Filter dapat menerapkan\nefek seperti pengaburan dan\npelengkungan sebelum tahap\npengomposisian.';
+catalog['AJAX'] = 'AJAX';
+catalog['Allow property changes in CSS\nvalues to occur smoothly over\na specified duration'] = 'Memungkinkan terjadinya perubahan\nproperti dalam nilai CSS secara\nlancar dalam durasi tertentu';
+catalog['Allow scripts to run in the\nbackground to handle computationally\nintensive tasks, without blocking\nthe UI or other scripts\nthat handle user interactions.'] = 'Memungkinkan skrip berjalan dalam\nlatar belakang untuk menangani\ntugas intensif secara komputasi,\ntanpa mencekal UI atau skrip lain\nyang menangani interaksi pengguna.';
+catalog['Allows the user to select\na date and time with time zone.'] = 'Memungkinkan pengguna memilih\ntanggal dan waktu dengan zona waktu.';
+catalog['Allows web browsers to conduct\nreal-time communication'] = 'Memungkinkan browser web melakukan\nkomunikasi waktu nyata';
+catalog['Allows web content to be\npresented using the\nuser\'s entire screen'] = 'Memungkinkan konten web\nyang akan disajikan\nmenggunakan keseluruhan\nlayar pengguna';
+catalog['An HTML5 specification that allows\ndevelopers to easily build\ntouch-enabled web apps for\ntouch-sensitive surfaces.'] = 'Spesifikasi HTML5 yang memungkinkan\npengembang membangun aplikasi web\nberkemampuan sentuh untuk permukaan\nyang sensitif akan sentuhan.';
+catalog['Audio & Video\nelements'] = 'Elemen\nAudio & Video';
+catalog['CSS2'] = 'CSS2';
+catalog['CSS3 2D\nTransforms'] = 'Transformasi\n2D CSS3';
+catalog['CSS3 3D\nTransforms'] = 'Transformasi\n3D CSS3';
+catalog['CSS3 Filters'] = 'Filter CSS3';
+catalog['CSS3 Flexbox'] = 'CSS3 Flexbox';
+catalog['CSS3\nAnimation'] = 'Animasi\nCSS3';
+catalog['CSS3\nGradients'] = 'Gradien\nCSS3';
+catalog['CSS3\nTransitions'] = 'CSS3\nTransitions';
+catalog['Calendar'] = 'Kalender';
+catalog['Cancel'] = 'Batal';
+catalog['Canvas'] = 'Canvas';
+catalog['Choose a time'] = 'Pilih waktu';
+catalog['Chrome OS version\\n1 released'] = 'Chrome OS versi\\n1 dirilis';
+catalog['Chrome for Android\\nBETA released'] = 'Chrome untuk Android\\nBETA dirilis';
+catalog['Chrome'] = 'Chrome';
+catalog['Clear all'] = 'Hapus semua';
+catalog['Clock'] = 'Jam';
+catalog['Content Security\nPolicy'] = 'Kebijakan\nKeamanan Konten';
+catalog['Cookies'] = 'Kuki';
+catalog['DOM Mutation\nobservers'] = 'Pengamat\nMutasi DOM';
+catalog['Date/time\ninput types'] = 'Jenis\nmasukan tanggal/waktu';
+catalog['Describes a way to animate the\nvalues of CSS properties over\ntime, using keyframes.'] = 'Mendeskripsikan cara untuk menganimasikan\nnilai properti CSS dari waktu ke\nwaktu, menggunakan keyframe.';
+catalog['Draft of third version\nof the HyperText Markup\nLanguage.'] = 'Draf versi ketiga\ndari HyperText Markup\nLanguage.';
+catalog['Drag & Drop'] = 'Seret & Lepas';
+catalog['Family of specifications of an\nXML-based file format for\ntwo-dimensional vector graphics,\nboth static and dynamic.'] = 'Keluarga spesifikasi format file\nberbasis XML untuk grafik\nvektor dua dimensi, baik statis\nmaupun dinamis.';
+catalog['Feb 2004: Google index reaches 6\nbillion items, including 4.28 billion\nweb pages and 880 million images'] = 'Feb 2004: Indeks Google mencapai 6\nmiliar item, termasuk 4,28 miliar\nlaman web dan 880 juta gambar';
+catalog['File\nSystem API'] = 'API Sistem\nFile';
+catalog['Firefox for mobile\\nversion 1 released'] = 'Firefox untuk seluler\\nversi 1 dirilis';
+catalog['Firefox'] = 'Firefox';
+catalog['First iPhone released\\nwith mobile version\\nof Safari 3'] = 'iPhone pertama dirilis\\ndengan versi seluler\\nSafari 3';
+catalog['Flash'] = 'Flash';
+catalog['Fourth version of the\nHyperText Markup\nLanguage'] = 'Versi keempat dari\nHyperText Markup\nLanguage.';
+catalog['Full Screen API'] = 'API Layar Penuh';
+catalog['Geolocation'] = 'Geolokasi';
+catalog['Global Internet Traffic\n(in petabytes per month)'] = 'Lalu Lintas Internet Global\n(dalam petabyte per bulan)';
+catalog['Global Internet Users'] = 'Pengguna Internet Global';
+catalog['HTML 1'] = 'HTML1';
+catalog['HTML5 element that allows\nfor dynamic, scriptable rendering\nof 2D shapes and bitmap images'] = 'Elemen HTML5 yang memungkinkan\nperenderan bentuk 2D dan gambar\nbitmap yang dapat dijadikan bahasa\nskrip yang dinamis';
+catalog['HTML5 elements which allow\nvideo and sound to be easily\nembedded and played in webpages,\nwithout requiring additional\nsoftware or plugins.'] = 'Elemen HTML5 yang memungkinkan\nvideo dan suara dapat disematkan\ndengan mudah dan diputar di laman\nweb, tanpa memerlukan perangkat\nlunak atau plugin tambahan.';
+catalog['HTML5'] = 'HTML5';
+catalog['HTTP'] = 'HTTP';
+catalog['Hide'] = 'Sembunyikan';
+catalog['HyperText Markup Language\nis the predominant markup\nlanguage for web pages'] = 'HyperText Markup Language\nadalah bahasa markup yang\ndominan untuk laman web';
+catalog['If 14,414PB of data were\nstored in standard\nDVDs placed side by side,\n it would span the distance\nfrom the Earth to the\nMoon.'] = 'Jika data sebesar 14.414 PB\ndisimpan di DVD standar, lalu\ndiletakkan berdampingan\njaraknya sama dengan jarak\nBumi ke Bulan.';
+catalog['If 6430PB of data were\nstored in standard\nDVDs and laid out on\nthe ground, it would\nspan 18.5 times the\nlength of the Trans-\nSiberian Railway.'] = 'Jika 6430PB data disimpan\ndalam DVD standar dan\ndiletakkan di atas tanah,\njangkauannya akan menjadi\n18,5 kali panjang Jalur\nkereta api Trans-Siberia.';
+catalog['If standard 320GB-\nhard drives were\nstacked on top of each\nother, 100PB of data\n(that is, 100 million\nGBs) would be taller\nthan the Burj Khalifa in\nDubai, the tallest\nstructure in the world.'] = 'Jika hard disk 320GB\nditumpuk satu per satu,\ndata sebesar 100 PB\n(atau 100 juta GB), maka\ntingginya akan lebih dari\nBurj Khalifa di Dubai,\ngedung tertinggi di dunia.';
+catalog['IndexedDB'] = 'IndexedDB';
+catalog['Initial release\\nof Opera Mini'] = 'Rilis awal\\nOpera Mini';
+catalog['Internet Explorer'] = 'Internet Explorer';
+catalog['Introduces new capabilities\nto a specification used to send\nHTTP or HTTPS requests directly\nto a web server and load the\nserver response data directly\nback into the script.'] = 'Memperkenalkan kemampuan baru\nke dalam spesifikasi yang digunakan\nuntuk mengirimkan permintaan HTTP\natau HTTPS secara langsung ke\nserver web dan memuat data\ntanggapan server secara langsung\nkembali ke dalam skrip.';
+catalog['Jan 2012: 60\nhours of video\nare uploaded per\nminute on\nYouTube'] = 'Jan 2012: 60\njam video\ndiunggah per\nmenitnya ke\nYouTube';
+catalog['January February March April May June July August September October November December'] = 'Januari Februari Maret April Mei Juni Juli Agustus September Oktober November Desember';
+catalog['Java applets, which can\nrun in a web browser using a\nJava Virtual Machine, were\nintroduced in the first\nversion of the Java language.'] = 'Applet Java, yang dapat\nberjalan di browser web\nmenggunakan Java Virtual\nMachine, diperkenalkan\ndalam versi pertama\nbahasa Java.';
+catalog['Java'] = 'Java';
+catalog['Javascript'] = 'Javascript';
+catalog['Mar 2010: 24 hours of video are\nuploaded per minute on YouTube'] = 'Mar 2010: 24 jam video\ndiunggah per menitnya ke YouTube';
+catalog['Mar 2011: If all of Blogger\'s posts\nwere combined into books they\nwould fill ~5.3 million novels'] = 'Mar 2011: Jika semua kirimaan Blogger\ndigabungkan ke dalam buku, semuanya\nakan sama dengan ~5,3 juta novel';
+catalog['Method of defining web\npage files to be cached,\nallowing them to work\noffline'] = 'Metode menentukan file laman\nweb yang akan dicatat dalam cache,\nyang memungkinnya bekerja secara\noffline';
+catalog['Method of displaying fonts\ndownloaded from websites'] = 'Metode menampilkan font\nyang diunduh dari situs web';
+catalog['Method of easily dragging\nand dropping elements on\na page, requiring minimal\nJavaScript'] = 'Metode menyeret dan melepaskan\nelemen di laman dengan mudah,\nyang memerlukan JavaScript yang\nminimal';
+catalog['Method of informing a\nwebsite of the user\'s\ngeographical location with\nthe user\'s consent'] = 'Metode menginformasikan\nsitus web dari lokasi\ngeografi pengguna dengan izin\ndari pengguna';
+catalog['Method of positioning and\ntransforming elements in\nthree-dimensional space.'] = 'Metode pemosisian dan\ntransformasi elemen dalam\nruang tiga dimensi.';
+catalog['Method of storing data\nclient-side inside the user\'s\nbrowser, and allows indexed\ndatabase queries. '] = 'Metode menyimpan data sisi\nklien di dalam browser pengguna,\ndan memungkinkan kueri basis\ndata terindeks. ';
+catalog['Method of transforming any\nelement on a web page, such as\nscaling, rotating, and translating,\nwithout changing its effect on\nthe page layout.'] = 'Metode mentransformasi segala\nelemen pada laman web, misalnya\npenskalaan, rotasi, dan penerjemahan,\ntanpa mengubah efeknya pada\ntata letak laman.';
+catalog['Method that allows web sites\nto register themselves as possible\nhandlers for particular protocols.'] = 'Metode yang memungkinkan\nsitus web mendaftarkan dirinya\nsendiri sebagai penangan yang\nmungkin untuk protokol tertentu.';
+catalog['Midnight'] = 'Tengah malam';
+catalog['Mosaic'] = 'Mosaic';
+catalog['NetScape'] = 'NetScape';
+catalog['Noon'] = 'Tengah hari';
+catalog['Nov 2004: Google search index\nreaches 8 billion items'] = 'Nov 2004: Indeks penelusuran Google\nmencapai 8 miliar item';
+catalog['Now'] = 'Sekarang';
+catalog['Offline Web\nApps:AppCache'] = 'Apps: AppCache\nWeb Offline';
+catalog['Opera'] = 'Opera';
+catalog['Pocket Internet Explorer\\non Windows CE 1.0\\nreleased'] = 'Pocket Internet Explorer\\ndi Windows CE 1.0\\ndirilis';
+catalog['Provides an API that allows\nweb apps to create, read, navigate,\nand write to a sandboxed section\nof the user\'s local file system.'] = 'Menyediakan API yang memungkinkan\naplikasi web membuat, membaca, menavigasi,\ndan menulis ke bagian kotak pasir\ndari sistem file lokal pengguna.';
+catalog['Provides an easy way for\ndevelopers to react to changes\nin a DOM.'] = 'Menyediakan sebuah cara\nmudah bagi pengembang\nuntuk menanggapi perubahan\ndalam DOM.';
+catalog['READ MORE'] = 'SELENGKAPNYA';
+catalog['RegisterProtocalHandler'] = 'RegisterProtocalHandler';
+catalog['Released April 1993'] = 'Dirilis April 1993';
+catalog['Released April 1995'] = 'Dirilis April 1995';
+catalog['Released April 1996'] = 'Dirilis April 1996';
+catalog['Released April 2003'] = 'Dirilis April 2003';
+catalog['Released April 2005'] = 'Dirilis April 2005';
+catalog['Released April 2007'] = 'Dirilis April 2007';
+catalog['Released April 2011'] = 'Dirilis April 2011';
+catalog['Released April 2012'] = 'Dirilis April 2012';
+catalog['Released April 27, 2011'] = 'Dirilis 27 April 2011';
+catalog['Released April 29, 2005'] = 'Dirilis 29 April 2005';
+catalog['Released August 13, 1996'] = 'Dirilis 13 Agustus 1996';
+catalog['Released August 16, 1995'] = 'Dirilis 16 Agustus 1995';
+catalog['Released August 16, 2011'] = 'Dirilis 16 Agustus 2011';
+catalog['Released August 1995'] = 'Dirilis Agustus 1995';
+catalog['Released August 1996'] = 'Dirilis Agustus 1996';
+catalog['Released August 2001'] = 'Dirilis Agustus 2001';
+catalog['Released August 2002'] = 'Dirilis Agustus 2002';
+catalog['Released August 2004'] = 'Dirilis Agustus 2004';
+catalog['Released August 27, 2001'] = 'Dirilis 27 Agustus 2001';
+catalog['Released August 9, 2011'] = 'Dirilis 9 Agustus 2011';
+catalog['Released December 11, 2008'] = 'Dirilis 11 Desember 2008';
+catalog['Released December 1993'] = 'Dirilis Desember 1993';
+catalog['Released December 1994'] = 'Dirilis Desember 1994';
+catalog['Released December 1997'] = 'Dirilis Desember 1997';
+catalog['Released December 2, 2010'] = 'Dirilis 2 Desember 2010';
+catalog['Released December 2000'] = 'Dirilis Desember 2000';
+catalog['Released December 2001'] = 'Dirilis Desember 2001';
+catalog['Released December 2006'] = 'Dirilis Desember 2006';
+catalog['Released December 2010'] = 'Dirilis Desember 2010';
+catalog['Released December 2011'] = 'Dirilis Desember 2011';
+catalog['Released February 2012'] = 'Dirilis Februari 2012';
+catalog['Released February 3, 2011'] = 'Dirilis 3 Februari 2011';
+catalog['Released January 1996'] = 'Dirilis Januari 1996';
+catalog['Released January 1997'] = 'Dirilis Januari 1997';
+catalog['Released January 2003'] = 'Dirilis Januari 2003';
+catalog['Released January 2006'] = 'Dirilis Januari 2006';
+catalog['Released January 2010'] = 'Dirilis Januari 2010';
+catalog['Released January 2012'] = 'Dirilis Januari 2012';
+catalog['Released January 25, 2010'] = 'Dirilis 25 Januari 2010';
+catalog['Released January 9, 2007'] = 'Dirilis 9 Januari 2007';
+catalog['Released July 20, 2011'] = 'Dirilis 20 Juli 2011';
+catalog['Released July 2010'] = 'Dirilis Juli 2010';
+catalog['Released July 8, 2000'] = 'Dirilis 8 Juli 2000';
+catalog['Released June 17, 2008'] = 'Dirilis 17 Juni 2008';
+catalog['Released June 1997'] = 'Dirilis Juni 1997';
+catalog['Released June 2, 2008'] = 'Dirilis 2 Juni 2008';
+catalog['Released June 2000'] = 'Dirilis Juni 2000';
+catalog['Released June 2003'] = 'Dirilis Juni 2003';
+catalog['Released June 2006'] = 'Dirilis Juni 2006';
+catalog['Released June 2008'] = 'Dirilis Juni 2008';
+catalog['Released June 2011'] = 'Dirilis Juni 2011';
+catalog['Released June 2012'] = 'Dirilis Juni 2012';
+catalog['Released June 21, 2011'] = 'Dirilis 21 Juni 2011';
+catalog['Released June 23, 2003'] = 'Dirilis 23 Juni 2003';
+catalog['Released June 30, 2009'] = 'Dirilis 30 Juni 2009';
+catalog['Released June 7, 2010'] = 'Dirilis 7 Juni 2010';
+catalog['Released June 7, 2011'] = 'Dirilis 7 Juni 2011';
+catalog['Released March 14, 2011'] = 'Dirilis 14 Maret 2011';
+catalog['Released March 18, 1999'] = 'Dirilis 18 Maret 1999';
+catalog['Released March 19, 2009'] = 'Dirilis 19 Maret 2009';
+catalog['Released March 1993'] = 'Dirilis Maret 1993';
+catalog['Released March 1995'] = 'Dirilis Maret 1995';
+catalog['Released March 1996'] = 'Dirilis Maret 1996';
+catalog['Released March 2008'] = 'Dirilis Maret 2008';
+catalog['Released March 2010'] = 'Dirilis Maret 2010';
+catalog['Released March 2012'] = 'Dirilis Maret 2012';
+catalog['Released March 22, 2011'] = 'Dirilis 22 Maret 2011';
+catalog['Released March 8, 2011'] = 'Dirilis 8 Maret 2011';
+catalog['Released May 1999'] = 'Dirilis Mei 1999';
+catalog['Released May 2004'] = 'Dirilis Mei 2004';
+catalog['Released May 2005'] = 'Dirilis Mei 2005';
+catalog['Released May 2012'] = 'Dirilis Mei 2012';
+catalog['Released May 21, 2010'] = 'Dirilis 21 Mei 2010';
+catalog['Released May 24, 2009'] = 'Dirilis 24 Mei 2009';
+catalog['Released November 1995'] = 'Dirilis November 1995';
+catalog['Released November 1998'] = 'Dirilis November 1998';
+catalog['Released November 2000'] = 'Dirilis November 2000';
+catalog['Released November 2009'] = 'Dirilis November 2009';
+catalog['Released November 2011'] = 'Dirilis November 2011';
+catalog['Released November 29, 2005'] = 'Dirilis 29 November 2005';
+catalog['Released November 9, 2004'] = 'Dirilis 9 November 2004';
+catalog['Released October 12, 2009'] = 'Dirilis 12 Oktober 2009';
+catalog['Released October 18, 2006'] = 'Dirilis 18 Oktober 2006';
+catalog['Released October 1994'] = 'Dirilis Oktober 1994';
+catalog['Released October 1998'] = 'Dirilis Oktober 1998';
+catalog['Released October 2001'] = 'Dirilis Oktober 2001';
+catalog['Released October 2002'] = 'Dirilis Oktober 2002';
+catalog['Released October 2007'] = 'Dirilis Oktober 2007';
+catalog['Released October 2011'] = 'Dirilis Oktober 2011';
+catalog['Released October 21, 2010'] = 'Dirilis 21 Oktober 2010';
+catalog['Released October 24, 2006'] = 'Dirilis 24 Oktober 2006';
+catalog['Released September 1997'] = 'Dirilis September 1997';
+catalog['Released September 2, 2010'] = 'Dirilis 2 September 2010';
+catalog['Released September 2003'] = 'Dirilis September 2003';
+catalog['Released September 2005'] = 'Dirilis September 2005';
+catalog['Released September 2009'] = 'Dirilis September 2009';
+catalog['Released September 2011'] = 'Dirilis September 2011';
+catalog['S M T W T F S'] = 'M S S R K J S';
+catalog['SSL'] = 'SSL';
+catalog['SVG'] = 'SVG';
+catalog['Safari'] = 'Safari';
+catalog['Second version of the\nHyperText Markup Language'] = 'Versi kedua dari\nHyperText Markup Language';
+catalog['Show'] = 'Tampilkan';
+catalog['Sunday Monday Tuesday Wednesday Thursday Friday Saturday'] = 'Minggu Senin Selasa Rabu Kamis Jumat Sabtu';
+catalog['Tells the browser to perform an\nanimation, so that the browser can\nreschedule a repaint of the\nwindow for the next animation frame.'] = 'Memerintahkan browser untuk menjalankan\nanimasi, sehingga browser tersebut dapat\nmenjadwalkan ulang pelukisan ulang\njendela untuk frame animasi berikutnya.';
+catalog['The fifth revision of the\nHyperText Markup Language'] = 'Revisi kelima dari\nHyperText Markup Language';
+catalog['Third version of the\nHyperText Markup\nLanguage.'] = 'Versi ketiga dari\nHyperText Markup\nLanguage.';
+catalog['Today'] = 'Hari ini';
+catalog['Tomorrow'] = 'Besok';
+catalog['Touch Events'] = 'Acara Sentuh';
+catalog['Web Audio\nAPI'] = 'API Audio\nWeb';
+catalog['Web Fonts'] = 'Font Web';
+catalog['WebGL'] = 'WebGL';
+catalog['WebRTC'] = 'WebRTC';
+catalog['Web\nWorkers'] = 'Pekerja\nWeb';
+catalog['XML'] = 'XML';
+catalog['XMLHTTPRequest2'] = 'XMLHTTPRequest2';
+catalog['Yesterday'] = 'Kemarin';
+catalog['You have selected an action, and you haven\'t made any changes on individual fields. You\'re probably looking for the Go button rather than the Save button.'] = 'Anda telah memilih tindakan, dan Anda belum melakukan perubahan apa pun di masing-masing bidang. Anda mungkin mencari tombol Jalankan dan bukan tombol Simpan.';
+catalog['You have selected an action, but you haven\'t saved your changes to individual fields yet. Please click OK to save. You\'ll need to re-run the action.'] = 'Anda telah memilih tindakan, namun belum menyimpan perubahan ke masing-masing bidang. Klik Oke untuk menyimpan. Anda akan perlu menjalankan ulang tindakan.';
+catalog['You have unsaved changes on individual editable fields. If you run an action, your unsaved changes will be lost.'] = 'Anda belum menyimpan perubahan pada masing-masing bidang yang dapat diedit. Jika Anda menjalankan tindakan, perubahan yang belum Anda simpan akan hilang.';
+catalog['http://dev.w3.org/csswg/css3-flexbox/'] = 'http://dev.w3.org/csswg/css3-flexbox/';
+catalog['http://en.wikipedia.org/wiki/S/SL_programming_language'] = 'http://en.wikipedia.org/wiki/S/SL_programming_language';
+catalog['requestAnimationFrame'] = 'requestAnimationFrame';
+
+
+function gettext(msgid) {
+  var value = catalog[msgid];
+  if (typeof(value) == 'undefined') {
+    return msgid;
+  } else {
+    return (typeof(value) == 'string') ? value : value[0];
+  }
+}
+
+function ngettext(singular, plural, count) {
+  value = catalog[singular];
+  if (typeof(value) == 'undefined') {
+    return (count == 1) ? singular : plural;
+  } else {
+    return value[pluralidx(count)];
+  }
+}
+
+function gettext_noop(msgid) { return msgid; }
+
+function pgettext(context, msgid) {
+  var value = gettext(context + '' + msgid);
+  if (value.indexOf('') != -1) {
+    value = msgid;
+  }
+  return value;
+}
+
+function npgettext(context, singular, plural, count) {
+  var value = ngettext(context + '' + singular, context + '' + plural, count);
+  if (value.indexOf('') != -1) {
+    value = ngettext(singular, plural, count);
+  }
+  return value;
+}
+
+function interpolate(fmt, obj, named) {
+  if (named) {
+    return fmt.replace(/%\(\w+\)s/g, function(match){return String(obj[match.slice(2,-2)])});
+  } else {
+    return fmt.replace(/%s/g, function(match){return String(obj.shift())});
+  }
+}
+
+/* formatting library */
+
+var formats = new Array();
+
+formats['DATETIME_FORMAT'] = 'N j, Y, P';
+formats['DATE_FORMAT'] = 'N j, Y';
+formats['DECIMAL_SEPARATOR'] = '.';
+formats['MONTH_DAY_FORMAT'] = 'F j';
+formats['NUMBER_GROUPING'] = '0';
+formats['TIME_FORMAT'] = 'P';
+formats['FIRST_DAY_OF_WEEK'] = '0';
+formats['TIME_INPUT_FORMATS'] = ['%H:%M:%S', '%H:%M'];
+formats['THOUSAND_SEPARATOR'] = ',';
+formats['DATE_INPUT_FORMATS'] = ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d %B, %Y'];
+formats['YEAR_MONTH_FORMAT'] = 'F Y';
+formats['SHORT_DATE_FORMAT'] = 'm/d/Y';
+formats['SHORT_DATETIME_FORMAT'] = 'm/d/Y P';
+formats['DATETIME_INPUT_FORMATS'] = ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M', '%Y-%m-%d', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M', '%m/%d/%Y', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M', '%m/%d/%y'];
+
+function get_format(format_type) {
+    var value = formats[format_type];
+    if (typeof(value) == 'undefined') {
+      return msgid;
+    } else {
+      return value;
+    }
+}

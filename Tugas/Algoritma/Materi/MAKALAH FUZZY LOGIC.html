@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://haniifahawaliah.blogspot.com/2016/11/makalah-fuzzy-logic.html -->
+<html class="v2" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr"><script src="./MAKALAH FUZZY LOGIC_files/cb=gapi.loaded_3" async=""></script><script src="./MAKALAH FUZZY LOGIC_files/cb=gapi.loaded_2" async=""></script><script src="./MAKALAH FUZZY LOGIC_files/cb=gapi.loaded_1" async=""></script><script src="./MAKALAH FUZZY LOGIC_files/cb=gapi(1).loaded_0" async=""></script><script data-dapp-detection="">
+(function() {
+  let alreadyInsertedMetaTag = false
+
+  function __insertDappDetected() {
+    if (!alreadyInsertedMetaTag) {
+      const meta = document.createElement('meta')
+      meta.name = 'dapp-detected'
+      document.head.appendChild(meta)
+      alreadyInsertedMetaTag = true
+    }
+  }
+
+  if (window.hasOwnProperty('web3')) {
+    // Note a closure can't be used for this var because some sites like
+    // www.wnyc.org do a second script execution via eval for some reason.
+    window.__disableDappDetectionInsertion = true
+    // Likely oldWeb3 is undefined and it has a property only because
+    // we defined it. Some sites like wnyc.org are evaling all scripts
+    // that exist again, so this is protection against multiple calls.
+    if (window.web3 === undefined) {
+      return
+    }
+    if (!window.web3.currentProvider ||
+        !window.web3.currentProvider.isMetaMask) {
+      __insertDappDetected()
+    }
+  } else {
+    var oldWeb3 = window.web3
+    Object.defineProperty(window, 'web3', {
+      configurable: true,
+      set: function (val) {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        oldWeb3 = val
+      },
+      get: function () {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        return oldWeb3
+      }
+    })
+  }
+})()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="./MAKALAH FUZZY LOGIC_files/3597120983-css_bundle_v2.css" rel="stylesheet" type="text/css">
+<meta content="width=1100" name="viewport">
+
+<meta content="blogger" name="generator">
+<link href="https://haniifahawaliah.blogspot.com/favicon.ico" rel="icon" type="image/x-icon">
+<link href="http://haniifahawaliah.blogspot.com/2016/11/makalah-fuzzy-logic.html" rel="canonical">
+<link rel="alternate" type="application/atom+xml" title="Hanifah Awaliah BLOG - Atom" href="https://haniifahawaliah.blogspot.com/feeds/posts/default">
+<link rel="alternate" type="application/rss+xml" title="Hanifah Awaliah BLOG - RSS" href="https://haniifahawaliah.blogspot.com/feeds/posts/default?alt=rss">
+<link rel="service.post" type="application/atom+xml" title="Hanifah Awaliah BLOG - Atom" href="https://www.blogger.com/feeds/6167128099697048532/posts/default">
+
+<link rel="alternate" type="application/atom+xml" title="Hanifah Awaliah BLOG - Atom" href="https://haniifahawaliah.blogspot.com/feeds/662761336813384291/comments/default">
+<!--[if IE]><script type="text/javascript" src="https://www.blogger.com/static/v1/jsbin/1270012344-ieretrofit.js"></script>
+<![endif]-->
+<link href="./MAKALAH FUZZY LOGIC_files/logo gundar real.png" rel="image_src">
+<meta content="http://haniifahawaliah.blogspot.com/2016/11/makalah-fuzzy-logic.html" property="og:url">
+<meta content="MAKALAH FUZZY LOGIC" property="og:title">
+<meta content="  MAKALAH   KECERDASAN BUATAN FUZZY LOGIC     Diajukan S ebagai T ugas M ata Kuliah   Pengantar Teknologi Sistem Cerdas     Dosen :   Ibu Ee..." property="og:description">
+<meta content="https://2.bp.blogspot.com/-71TrhCEd_ak/WDrTMA2JqMI/AAAAAAAAEr4/toqomWF3iqYlSsvINZuq1tI1zYg_ZQb3ACLcB/w1200-h630-p-k-no-nu/logo%2Bgundar%2Breal.png" property="og:image">
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<title>Hanifah Awaliah BLOG: MAKALAH FUZZY LOGIC</title>
+<style type="text/css">@font-face{font-family:'Corsiva';font-style:normal;font-weight:700;src:local('Corsiva Bold'),local('Corsiva-Bold'),url(//fonts.gstatic.com/l/font?kit=zOL54pjBmb1Z8oKb-guO-cNkvg&skey=fa0e5cf7b1863096&v=v10)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}@font-face{font-family:'Crafty Girls';font-style:normal;font-weight:400;src:local('Crafty Girls Regular'),local('CraftyGirls-Regular'),url(//fonts.gstatic.com/s/craftygirls/v9/va9B4kXI39VaDdlPJo8N_NveRhf6.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}</style>
+<style id="page-skin-1" type="text/css"><!--
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Travel
+Designer: Sookhee Lee
+URL:      www.plyfly.net
+----------------------------------------------- */
+
+/* Content
+----------------------------------------------- */
+body {
+font: normal normal 13px 'Trebuchet MS',Trebuchet,sans-serif;
+color: #b8b8b8;
+background: #4bb4ca url(//themes.googleusercontent.com/image?id=0BwVBOzw_-hbMYTNmMDk0MGItYzY5ZS00ZGIxLWIzOTgtNWJiMjQ0ZmI5NGM2) repeat scroll top center /* Credit: latex (http://www.istockphoto.com/googleimages.php?id=8706225&platform=blogger) */;
+}
+html body .region-inner {
+min-width: 0;
+max-width: 100%;
+width: auto;
+}
+a:link {
+text-decoration:none;
+color: #f25900;
+}
+a:visited {
+text-decoration:none;
+color: #a24007;
+}
+a:hover {
+text-decoration:underline;
+color: #f25900;
+}
+.content-outer .content-cap-top {
+height: 0;
+background: transparent none repeat-x scroll top center;
+}
+.content-outer {
+margin: 0 auto;
+padding-top: 20px;
+}
+.content-inner {
+background: transparent url(//blogblog.com/1kt/travel/bg_black_70.png) repeat scroll top left;
+background-position: left -0;
+background-color: #040404;
+padding: 20px;
+}
+.main-inner .date-outer {
+margin-bottom: 2em;
+}
+/* Header
+----------------------------------------------- */
+.header-inner .Header .titlewrapper,
+.header-inner .Header .descriptionwrapper {
+padding-left: 10px;
+padding-right: 10px;
+}
+.Header h1 {
+font: normal normal 24px Crafty Girls;
+color: #ffffff;
+}
+.Header h1 a {
+color: #ffffff;
+}
+.Header .description {
+font-size: 130%;
+}
+/* Tabs
+----------------------------------------------- */
+.tabs-inner {
+margin: 1em 0 0;
+padding: 0;
+}
+.tabs-inner .section {
+margin: 0;
+}
+.tabs-inner .widget ul {
+padding: 0;
+background: rgba(0, 0, 0, 0) url(//www.blogblog.com/1kt/travel/bg_black_50.png) repeat scroll top center;
+}
+.tabs-inner .widget li {
+border: none;
+}
+.tabs-inner .widget li a {
+display: inline-block;
+padding: 1em 1.5em;
+color: #ffffff;
+font: normal bold 20px 'Times New Roman', Times, FreeSerif, serif;
+}
+.tabs-inner .widget li.selected a,
+.tabs-inner .widget li a:hover {
+position: relative;
+z-index: 1;
+background: rgba(0, 0, 0, 0) url(//www.blogblog.com/1kt/travel/bg_black_50.png) repeat scroll top center;
+color: #ffffff;
+}
+/* Headings
+----------------------------------------------- */
+h2 {
+font: normal bold 30px Corsiva;
+color: #ffffff;
+}
+.main-inner h2.date-header {
+font: italic normal 24px Crafty Girls;
+color: #d5a6bd;
+}
+.footer-inner .widget h2,
+.sidebar .widget h2 {
+padding-bottom: .5em;
+}
+/* Main
+----------------------------------------------- */
+.main-inner {
+padding: 20px 0;
+}
+.main-inner .column-center-inner {
+padding: 10px 0;
+}
+.main-inner .column-center-inner .section {
+margin: 0 10px;
+}
+.main-inner .column-right-inner {
+margin-left: 20px;
+}
+.main-inner .fauxcolumn-right-outer .fauxcolumn-inner {
+margin-left: 20px;
+background: rgba(0, 0, 0, 0) url(//www.blogblog.com/1kt/travel/bg_black_50.png) repeat scroll top left;
+}
+.main-inner .column-left-inner {
+margin-right: 20px;
+}
+.main-inner .fauxcolumn-left-outer .fauxcolumn-inner {
+margin-right: 20px;
+background: rgba(0, 0, 0, 0) url(//www.blogblog.com/1kt/travel/bg_black_50.png) repeat scroll top left;
+}
+.main-inner .column-left-inner,
+.main-inner .column-right-inner {
+padding: 15px 0;
+}
+/* Posts
+----------------------------------------------- */
+h3.post-title {
+margin-top: 20px;
+}
+h3.post-title a {
+font: normal bold 20px Corsiva;
+color: #ffffff;
+}
+h3.post-title a:hover {
+text-decoration: underline;
+}
+.main-inner .column-center-outer {
+background: rgba(0, 0, 0, 0) none repeat scroll top left;
+_background-image: none;
+}
+.post-body {
+line-height: 1.4;
+position: relative;
+}
+.post-header {
+margin: 0 0 1em;
+line-height: 1.6;
+}
+.post-footer {
+margin: .5em 0;
+line-height: 1.6;
+}
+#blog-pager {
+font-size: 140%;
+}
+#comments {
+background: transparent url(//blogblog.com/1kt/travel/bg_black_50.png) repeat scroll top center;
+padding: 15px;
+}
+#comments .comment-author {
+padding-top: 1.5em;
+}
+#comments h4,
+#comments .comment-author a,
+#comments .comment-timestamp a {
+color: #ffffff;
+}
+#comments .comment-author:first-child {
+padding-top: 0;
+border-top: none;
+}
+.avatar-image-container {
+margin: .2em 0 0;
+}
+/* Comments
+----------------------------------------------- */
+#comments a {
+color: #ffffff;
+}
+.comments .comments-content .icon.blog-author {
+background-repeat: no-repeat;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sLFwMeCjjhcOMAAAD+SURBVDjLtZSvTgNBEIe/WRRnm3U8RC1neQdsm1zSBIU9VVF1FkUguQQsD9ITmD7ECZIJSE4OZo9stoVjC/zc7ky+zH9hXwVwDpTAWWLrgS3QAe8AZgaAJI5zYAmc8r0G4AHYHQKVwII8PZrZFsBFkeRCABYiMh9BRUhnSkPTNCtVXYXURi1FpBDgArj8QU1eVXUzfnjv7yP7kwu1mYrkWlU33vs1QNu2qU8pwN0UpKoqokjWwCztrMuBhEhmh8bD5UDqur75asbcX0BGUB9/HAMB+r32hznJgXy2v0sGLBcyAJ1EK3LFcbo1s91JeLwAbwGYu7TP/3ZGfnXYPgAVNngtqatUNgAAAABJRU5ErkJggg==);
+}
+.comments .comments-content .loadmore a {
+border-top: 1px solid #ffffff;
+border-bottom: 1px solid #ffffff;
+}
+.comments .comment-thread.inline-thread {
+background: rgba(0, 0, 0, 0);
+}
+.comments .continue {
+border-top: 2px solid #ffffff;
+}
+/* Widgets
+----------------------------------------------- */
+.sidebar .widget {
+border-bottom: 2px solid rgba(0, 0, 0, 0);
+padding-bottom: 10px;
+margin: 10px 0;
+}
+.sidebar .widget:first-child {
+margin-top: 0;
+}
+.sidebar .widget:last-child {
+border-bottom: none;
+margin-bottom: 0;
+padding-bottom: 0;
+}
+.footer-inner .widget,
+.sidebar .widget {
+font: normal normal 14px Crafty Girls;
+color: #ffd966;
+}
+.sidebar .widget a:link {
+color: #ffffff;
+text-decoration: none;
+}
+.sidebar .widget a:visited {
+color: #b87209;
+}
+.sidebar .widget a:hover {
+color: #ffffff;
+text-decoration: underline;
+}
+.footer-inner .widget a:link {
+color: #f25900;
+text-decoration: none;
+}
+.footer-inner .widget a:visited {
+color: #a24007;
+}
+.footer-inner .widget a:hover {
+color: #f25900;
+text-decoration: underline;
+}
+.widget .zippy {
+color: #ffffff;
+}
+.footer-inner {
+background: transparent none repeat scroll top center;
+}
+/* Mobile
+----------------------------------------------- */
+body.mobile  {
+background-size: 100% auto;
+}
+body.mobile .AdSense {
+margin: 0 -10px;
+}
+.mobile .body-fauxcolumn-outer {
+background: transparent none repeat scroll top left;
+}
+.mobile .footer-inner .widget a:link {
+color: #ffffff;
+text-decoration: none;
+}
+.mobile .footer-inner .widget a:visited {
+color: #b87209;
+}
+.mobile-post-outer a {
+color: #ffffff;
+}
+.mobile-link-button {
+background-color: #f25900;
+}
+.mobile-link-button a:link, .mobile-link-button a:visited {
+color: #ffffff;
+}
+.mobile-index-contents {
+color: #b8b8b8;
+}
+.mobile .tabs-inner .PageList .widget-content {
+background: rgba(0, 0, 0, 0) url(//www.blogblog.com/1kt/travel/bg_black_50.png) repeat scroll top center;
+color: #ffffff;
+}
+.mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
+border-left: 1px solid #ffffff;
+}
+
+--></style>
+<style id="template-skin-1" type="text/css"><!--
+body {
+min-width: 960px;
+}
+.content-outer, .content-fauxcolumn-outer, .region-inner {
+min-width: 960px;
+max-width: 960px;
+_width: 960px;
+}
+.main-inner .columns {
+padding-left: 0;
+padding-right: 290px;
+}
+.main-inner .fauxcolumn-center-outer {
+left: 0;
+right: 290px;
+/* IE6 does not respect left and right together */
+_width: expression(this.parentNode.offsetWidth -
+parseInt("0") -
+parseInt("290px") + 'px');
+}
+.main-inner .fauxcolumn-left-outer {
+width: 0;
+}
+.main-inner .fauxcolumn-right-outer {
+width: 290px;
+}
+.main-inner .column-left-outer {
+width: 0;
+right: 100%;
+margin-left: -0;
+}
+.main-inner .column-right-outer {
+width: 290px;
+margin-right: -290px;
+}
+#layout {
+min-width: 0;
+}
+#layout .content-outer {
+min-width: 0;
+width: 800px;
+}
+#layout .region-inner {
+min-width: 0;
+width: auto;
+}
+--></style>
+<link href="./MAKALAH FUZZY LOGIC_files/authorization.css" media="all" onload="if(media!=&#39;all&#39;)media=&#39;all&#39;" rel="stylesheet"><noscript><link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=6167128099697048532&amp;zx=36bd2e9a-69f5-4f50-836f-59d988298549' rel='stylesheet'/></noscript>
+
+<style type="text/css">body, a:hover {cursor: url(https://lh4.googleusercontent.com/proxy/Z3C7qp_xVD1UhkCVGndPaxs81d9iZzAlzVDHlHm10dAfsEJ2FKke-lwz8oZE6qltVhKbCJARqc7F90DUBVoZc3rtasE=s0-d), progress !important;}</style><script type="text/javascript" src="./MAKALAH FUZZY LOGIC_files/f.txt"></script><style>.gc-bubbleDefault{background-color:transparent !important;text-align:left;padding:0 !important;margin:0 !important;border:0 !important;table-layout:auto !important}.gc-reset{background-color:transparent !important;border:0 !important;padding:0 !important;margin:0 !important;text-align:left}.pls-bubbleTop{border-bottom:1px solid #ccc !important}.pls-topTail,.pls-vertShimLeft,.pls-contentLeft{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif) !important}.pls-topTail{background-repeat:repeat-x !important;background-position:bottom !important}.pls-vertShim{background-color:#fff !important;text-align:right}.tbl-grey .pls-vertShim{background-color:#f5f5f5 !important}.pls-vertShimLeft{background-repeat:repeat-y !important;background-position:right !important;height:4px}.pls-vertShimRight{height:4px}.pls-confirm-container .pls-vertShim{background-color:#fff3c2 !important}.pls-contentWrap{background-color:#fff !important;position:relative !important;vertical-align:top}.pls-contentLeft{background-repeat:repeat-y;background-position:right;vertical-align:top}.pls-dropRight{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png) !important;background-repeat:repeat-y !important;vertical-align:top}.pls-vert,.pls-tailleft,.pls-dropTR .pls-dropBR,.pls-dropBL,.pls-vert img{vertical-align:top}.pls-dropBottom{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png) !important;background-repeat:repeat-x !important;width:100%;vertical-align:top}.pls-topLeft{background:inherit !important;text-align:right;vertical-align:bottom}.pls-topRight{background:inherit !important;text-align:left;vertical-align:bottom}.pls-bottomLeft{background:inherit !important;text-align:right}.pls-bottomRight{background:inherit !important;text-align:left;vertical-align:top}.pls-tailtop,.pls-tailright,.pls-tailbottom,.pls-tailleft{display:none;position:relative}.pls-tailbottom,.pls-tailtop,.pls-tailright,.pls-tailleft,.pls-dropTR,.pls-dropBR,.pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png) !important;background-repeat:no-repeat}.tbl-grey .pls-tailbottom,.tbl-grey .pls-tailtop,.tbl-grey .pls-tailright,.tbl-grey .pls-tailleft,.tbl-grey .pls-dropTR,.tbl-grey .pls-dropBR,.tbl-grey .pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite-grey.png) !important}.pls-tailbottom{background-position:-23px 0}.pls-confirm-container .pls-tailbottom{background-position:-23px -10px}.pls-tailtop{background-position:-19px -20px}.pls-tailright{background-position:0 0}.pls-tailleft{background-position:-10px 0}.pls-tailtop{vertical-align:top}.gc-bubbleDefault td{line-height:0;font-size:0}.pls-topLeft img,.pls-topRight img,.pls-tailbottom{vertical-align:bottom}.pls-bottomLeft img,.bubbleDropTR,.pls-dropBottomL img,.pls-dropBottom img,.pls-dropBottomR img,.pls-bottomLeft{vertical-align:top}.pls-dropTR{background-position:0 -22px}.pls-dropBR{background-position:0 -27px}.pls-dropBL{background-position:0 -16px}.pls-spacertop,.pls-spacerright,.pls-spacerbottom,.pls-spacerleft{position:static !important}.pls-spinner{bottom:0;position:absolute;left:0;margin:auto;right:0;top:0} </style><script async="" src="./MAKALAH FUZZY LOGIC_files/lazy.min.js.download"></script></head><body class=" variant-studio"><a href="http://www.cursors-4u.com/cursor/2008/12/15/winnie-the-pooh.html" target="_blank" title="Winnie The Pooh"><img alt="Winnie The Pooh" border="0" src="./MAKALAH FUZZY LOGIC_files/unnamed.png" style="position:absolute; top: 0px; right: 0px;"></a>
+
+<div class="navbar section" id="navbar"><div class="widget Navbar" data-version="1" id="Navbar1"><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="" tabindex="0" vspace="0" width="100%" id="navbar-iframe" name="navbar-iframe" src="./MAKALAH FUZZY LOGIC_files/navbar.html"></iframe></div>
+<script type="text/javascript" src="./MAKALAH FUZZY LOGIC_files/plusone.js.download" gapi_processed="true"></script>
+<script type="text/javascript">
+      gapi.load("gapi.iframes:gapi.iframes.style.bubble", function() {
+        if (gapi.iframes && gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: 'https://www.blogger.com/navbar.g?targetBlogID\x3d6167128099697048532\x26blogName\x3dHanifah+Awaliah+BLOG\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dLIGHT\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://haniifahawaliah.blogspot.com/search\x26blogLocale\x3din\x26v\x3d2\x26homepageUrl\x3dhttps://haniifahawaliah.blogspot.com/\x26targetPostID\x3d662761336813384291\x26blogPostOrPageUrl\x3dhttps://haniifahawaliah.blogspot.com/2016/11/makalah-fuzzy-logic.html\x26vt\x3d-9130138183143717957',
+              where: document.getElementById("navbar-iframe-container"),
+              id: "navbar-iframe"
+          });
+        }
+      });
+    </script><script type="text/javascript">
+(function() {
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/google_top_exp.js';
+var head = document.getElementsByTagName('head')[0];
+if (head) {
+head.appendChild(script);
+}})();
+</script>
+</div></div>
+<div class="body-fauxcolumns">
+<div class="fauxcolumn-outer body-fauxcolumn-outer">
+<div class="cap-top">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+<div class="fauxborder-left">
+<div class="fauxborder-right"></div>
+<div class="fauxcolumn-inner">
+</div>
+</div>
+<div class="cap-bottom">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+</div>
+</div>
+<div class="content">
+<div class="content-fauxcolumns">
+<div class="fauxcolumn-outer content-fauxcolumn-outer">
+<div class="cap-top">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+<div class="fauxborder-left">
+<div class="fauxborder-right"></div>
+<div class="fauxcolumn-inner">
+</div>
+</div>
+<div class="cap-bottom">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+</div>
+</div>
+<div class="content-outer">
+<div class="content-cap-top cap-top">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+<div class="fauxborder-left content-fauxborder-left">
+<div class="fauxborder-right content-fauxborder-right"></div>
+<div class="content-inner">
+<header>
+<div class="header-outer">
+<div class="header-cap-top cap-top">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+<div class="fauxborder-left header-fauxborder-left">
+<div class="fauxborder-right header-fauxborder-right"></div>
+<div class="region-inner header-inner">
+<div class="header section" id="header"><div class="widget Header" data-version="1" id="Header1">
+<div id="header-inner">
+<div class="titlewrapper">
+<h1 class="title">
+<a href="https://haniifahawaliah.blogspot.com/">
+Hanifah Awaliah BLOG
+</a>
+</h1>
+</div>
+<div class="descriptionwrapper">
+<p class="description"><span>
+</span></p>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="header-cap-bottom cap-bottom">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+</div>
+</header>
+<div class="tabs-outer">
+<div class="tabs-cap-top cap-top">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+<div class="fauxborder-left tabs-fauxborder-left">
+<div class="fauxborder-right tabs-fauxborder-right"></div>
+<div class="region-inner tabs-inner">
+<div class="tabs no-items section" id="crosscol"></div>
+<div class="tabs no-items section" id="crosscol-overflow"></div>
+</div>
+</div>
+<div class="tabs-cap-bottom cap-bottom">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+</div>
+<div class="main-outer">
+<div class="main-cap-top cap-top">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+<div class="fauxborder-left main-fauxborder-left">
+<div class="fauxborder-right main-fauxborder-right"></div>
+<div class="region-inner main-inner">
+<div class="columns fauxcolumns">
+<div class="fauxcolumn-outer fauxcolumn-center-outer">
+<div class="cap-top">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+<div class="fauxborder-left">
+<div class="fauxborder-right"></div>
+<div class="fauxcolumn-inner">
+</div>
+</div>
+<div class="cap-bottom">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+</div>
+<div class="fauxcolumn-outer fauxcolumn-left-outer">
+<div class="cap-top">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+<div class="fauxborder-left">
+<div class="fauxborder-right"></div>
+<div class="fauxcolumn-inner">
+</div>
+</div>
+<div class="cap-bottom">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+</div>
+<div class="fauxcolumn-outer fauxcolumn-right-outer">
+<div class="cap-top">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+<div class="fauxborder-left">
+<div class="fauxborder-right"></div>
+<div class="fauxcolumn-inner">
+</div>
+</div>
+<div class="cap-bottom">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+</div>
+<!-- corrects IE6 width calculation -->
+<div class="columns-inner">
+<div class="column-center-outer">
+<div class="column-center-inner">
+<div class="main section" id="main"><div class="widget Blog" data-version="1" id="Blog1">
+<div class="blog-posts hfeed">
+
+          <div class="date-outer">
+        
+<h2 class="date-header"><span>Minggu, 27 November 2016</span></h2>
+
+          <div class="date-posts">
+        
+<div class="post-outer">
+<div class="post hentry" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+<meta content="https://2.bp.blogspot.com/-71TrhCEd_ak/WDrTMA2JqMI/AAAAAAAAEr4/toqomWF3iqYlSsvINZuq1tI1zYg_ZQb3ACLcB/s200/logo%2Bgundar%2Breal.png" itemprop="image_url">
+<meta content="6167128099697048532" itemprop="blogId">
+<meta content="662761336813384291" itemprop="postId">
+<a name="662761336813384291"></a>
+<h3 class="post-title entry-title" itemprop="name">
+MAKALAH FUZZY LOGIC
+</h3>
+<div class="post-header">
+<div class="post-header-line-1"></div>
+</div>
+<div class="post-body entry-content" id="post-body-662761336813384291" itemprop="description articleBody">
+<div class="WordSection1">
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">MAKALAH<o:p></o:p></span></b></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">KECERDASAN BUATAN FUZZY LOGIC</span></b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;"><o:p></o:p></span></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<br></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Diajukan </span></b><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">S</span></b><b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">ebagai </span></b><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">T</span></b><b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">ugas </span></b><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">M</span></b><b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">ata Kuliah<o:p></o:p></span></b></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Pengantar
+Teknologi Sistem Cerdas<o:p></o:p></span></b></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<br></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Dosen :<o:p></o:p></span></b></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Ibu </span></b><b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Eel Susilowati<o:p></o:p></span></b></div>
+<div class="MsoNormal" style="line-height: 150%;">
+<!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_2" o:spid="_x0000_s1026" type="#_x0000_t75"
+ style='position:absolute;margin-left:133.45pt;margin-top:.6pt;width:126.1pt;
+ height:125.55pt;z-index:-251657216;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+ mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;
+ mso-width-relative:page;mso-height-relative:page' o:allowincell="f">
+ <v:imagedata src="file:///C:\Users\HANIFA~1\AppData\Local\Temp\msohtmlclip1\01\clip_image001.jpg"
+  o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></div>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://2.bp.blogspot.com/-71TrhCEd_ak/WDrTMA2JqMI/AAAAAAAAEr4/toqomWF3iqYlSsvINZuq1tI1zYg_ZQb3ACLcB/s1600/logo%2Bgundar%2Breal.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="200" src="./MAKALAH FUZZY LOGIC_files/logo gundar real.png" width="200"></a></div>
+<br>
+<div align="center" class="MsoNormal" style="line-height: 150%; margin-left: 7.1pt; text-align: center;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Disusun
+Oleh :<o:p></o:p></span></b></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Desti Nurismawati&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12114776<o:p></o:p></span></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Dewandra Sapto P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12114863<o:p></o:p></span></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Fadhil Dzulfiqar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13114736<o:p></o:p></span></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Farid Nurachman&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13114977<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 30.0pt; text-indent: 42.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Faruk Albab&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14114011</span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 30pt; text-align: start; text-indent: 42pt;">
+<span style="font-size: 12pt; text-align: center;"><span style="font-family: &quot;times new roman&quot; , serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></span><span style="font-family: &quot;times new roman&quot; , serif; font-size: 12pt; text-align: center;">Frida Riskianti &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;14114389</span></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Hadyan Ramadhan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1D114084<o:p></o:p></span></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Hanifah Awaliah&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14114758<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: left;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 137pt; text-align: left; text-indent: 26.05pt;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; KELAS 3KA13<o:p></o:p></span></b></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 88pt; text-align: left; text-indent: 26.05pt;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;JURUSAN SISTEM INFORMASI<o:p></o:p></span></b></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: left; text-indent: 26.05pt;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 11.5pt; line-height: 150%;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FAKULTAS ILMU KOMPUTER DAN TEKNOLOGI INFORMASI<o:p></o:p></span></b></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 93pt; text-align: left; text-indent: 26.05pt;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; UNIVERSITAS GUNADARMA<o:p></o:p></span></b></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 165pt; text-align: left; text-indent: 26.05pt;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2016<o:p></o:p></span></b></div>
+<div class="MsoNormal" style="text-align: left;">
+<br></div>
+</div>
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;"><br clear="all" style="mso-break-type: section-break; page-break-before: always;">
+</span></b>
+
+<br>
+<div class="WordSection2">
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">KATA PENGANTAR<o:p></o:p></span></b></div>
+<div class="MsoNormal" style="line-height: 150%;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Puji
+syukur kami panjatkan kehadirat Allah SWT, yang telah memberikan rahmat dan
+hidayah-Nya kepada kami semua, dan tidak lupa shalawat beserta salam kami
+haturkan kepada Nabi Muhammad SAW, sehingga kami dapat menyelesaikan tugas
+makalah pada mata kuliah Pengantar Teknologi Sistem Cerdas ini tepat waktu.<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Makalah
+dengan judul “Kecerdasan Buatan Fuzzy Logic” ini kami susun untuk memenuhi
+tugas mata kuliah Pengantar Teknologi Sistem Cerdas yang diberikan oleh ibu Eel
+Susilowati.<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Kami
+mengucapkan terimakasih kepada anggota kelompok 2 yang telah membantu dalam
+penyusunan makalah ini. Kami menyadari masih banyak kekurangan dalam makalah
+ini, dengan kerendahan hati, kami memohon maaf.<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Semoga
+makalah ini dapat berguna dan bermanfaat bagi kita semua.<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%;">
+<br></div>
+<div align="right" class="MsoNormal" style="line-height: 150%; text-align: right;">
+<br></div>
+<div align="right" class="MsoNormal" style="line-height: 150%; text-align: right;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Depok, </span><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">2</span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">7</span><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;"> November </span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">2016<o:p></o:p></span></div>
+<div align="right" class="MsoNormal" style="line-height: 150%; text-align: right;">
+<br></div>
+<div align="right" class="MsoNormal" style="line-height: 150%; text-align: right;">
+<br></div>
+<div align="right" class="MsoNormal" style="line-height: 150%; text-align: right;">
+<br></div>
+<div align="right" class="MsoNormal" style="line-height: 150%; text-align: right;">
+<br></div>
+<div align="right" class="MsoNormal" style="line-height: 150%; text-align: right;">
+<br></div>
+<div align="right" class="MsoNormal" style="line-height: 150%; margin-left: 340.0pt; text-align: right;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Penyusun<o:p></o:p></span></div>
+<div class="MsoNormal">
+<br></div>
+<div class="MsoNormal">
+<o:p><br></o:p></div>
+</div>
+<br>
+<div class="MsoNormal" style="line-height: 150%; tab-stops: 170.65pt center 198.4pt;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BAB
+I<o:p></o:p></span></b></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">PENDAHULUAN<o:p></o:p></span></b></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; mso-list: l0 level2 lfo1; text-align: justify; text-indent: -36.0pt;">
+<!--[if !supportLists]--><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">1.1.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><!--[endif]--><b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">Latar
+Belakang</span></b><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;"><o:p></o:p></span></b></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Logika Fuzzy merupakan suatu logika yang
+memiliki nilai kekaburan atau kesamaran (fuzzyness) antara benar atau salah.
+Dalam logika klasik dinyatakan bahwa segala hal dapat diekspresikan dalam
+istilah binary (0 atau 1, hitam atau putih, ya atau tidak), sedangkan logika
+fuzzy memungkinkan nilai keanggotaan antara 0 dan 1, tingkat keabuan dan juga
+hitam dan putih, dan dalam bentuk linguistik, konsep tidak pasti seperti
+"sedikit", "lumayan" dan "sangat". Logika ini
+berhubungan dengan himpunan fuzzy dan teori kemungkinan. Logika fuzzy ini
+diperkenalkan oleh Dr. Lotfi Zadeh dari Universitas California, Berkeley pada
+1965.&nbsp;</span><br>
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12pt; text-indent: 36pt;">Logika fuzzy dapat digunakan dalam
+bidang teori kontrol, teori keputusan, dan beberapa bagian dalam managemen
+sains. Selain itu, kelebihan dari logika fuzzy adalah kemampuan dalam proses
+penalaran secara bahasa (linguistic reasoning), sehingga dalam perancangannya
+tidak memerlukan persamaan matematik dari objek yang dikendalikan. Adapun salah
+satu contoh aplikasi logika fuzzy dalam kehidupan sehari-hari adalah Pada tahun
+1990 pertama kali dibuat mesin cuci dengan logika fuzzy di Jepang (Matsushita
+Electric Industrial Company). Sistem fuzzy digunakan untuk menentukan putaran
+yang tepat secara otomatis berdasarkan jenis dan 2 banyaknya kotoran serta
+jumlah yang akan dicuci. Input yang digunakan adalah: seberapa kotor, jenis
+kotoran, dan banyaknya yang dicuci. Mesin ini menggunakan sensor optik ,
+mengeluarkan cahaya ke air dan mengukur bagaimana cahaya tersebut sampai ke
+ujung lainnya. Makin kotor, maka sinar yang sampai makin redup. Disamping itu,
+sistem juga dapat menentukan jenis kotoran (daki atau minyak).</span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 35.45pt; text-align: justify;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Himpunan
+fuzzy didasarkan pada gagasan untuk memperluas jangkauan fungsi karakterisik
+sedemikian hingga fungsi tersebut akan mencakup bilangan riil pada interval
+[0,1]. Dalam tugas akhir ini dibahas mengenai kardinalitas, keterbatasan dan
+kekonvekan himpunan fuzzy. Pada himpunan fuzzy, sebuah objek dapat berada pada
+sebuah himpunan secara parsial. Derajat keanggotaan dalam himpunan fuzzy diukur
+dengan fungsi yang merupakan generalisasi dari fungsi karakteristik yang
+disebut fungsi keanggotaan atau fungsi kompatibilitas. <o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify; text-indent: 36.0pt;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; mso-list: l0 level2 lfo1; text-indent: -36.0pt;">
+<!--[if !supportLists]--><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">1.2.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><!--[endif]--><b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">Rumusan
+Masalah</span></b><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;"><o:p></o:p></span></b></div>
+<div class="MsoListParagraphCxSpFirst" style="line-height: 150%; margin-bottom: 10.0pt; margin-left: 49.65pt; margin-right: 0cm; margin-top: 0cm; mso-add-space: auto; mso-list: l3 level1 lfo2; text-align: justify; text-indent: -14.2pt;">
+<!--[if !supportLists]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">1.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Apa </span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Sejarah dari Logic Fuzzy</span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">?<b><o:p></o:p></b></span></div>
+<div class="MsoListParagraphCxSpMiddle" style="line-height: 150%; margin-bottom: 10.0pt; margin-left: 49.65pt; margin-right: 0cm; margin-top: 0cm; mso-add-space: auto; mso-list: l3 level1 lfo2; text-align: justify; text-indent: -14.2pt;">
+<!--[if !supportLists]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">2.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Apakah </span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Perbedaan Logika Klasik atau Tegas
+dengan Logika Fuzzy</span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;"> ?<b><o:p></o:p></b></span></div>
+<div class="MsoListParagraphCxSpMiddle" style="line-height: 150%; margin-bottom: 10.0pt; margin-left: 49.65pt; margin-right: 0cm; margin-top: 0cm; mso-add-space: auto; mso-list: l3 level1 lfo2; text-align: justify; text-indent: -14.2pt;">
+<!--[if !supportLists]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">3.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Bagaimana </span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Grafik Perbedaan Logika Logic Fuzzy
+dengan Logika Tegas</span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;"> ?<b><o:p></o:p></b></span></div>
+<div class="MsoListParagraphCxSpLast" style="line-height: 150%; margin-bottom: 10.0pt; margin-left: 49.65pt; margin-right: 0cm; margin-top: 0cm; mso-add-space: auto; mso-list: l3 level1 lfo2; text-align: justify; text-indent: -14.2pt;">
+<!--[if !supportLists]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">4.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Apa </span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Alasan digunakannya Logika Fuzzy</span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">?<b><o:p></o:p></b></span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; mso-list: l0 level2 lfo1; text-indent: -36.0pt;">
+<!--[if !supportLists]--><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">1.3.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><!--[endif]--><b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">Tujuan </span></b><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;"><o:p></o:p></span></b></div>
+<div class="MsoListParagraphCxSpFirst" style="line-height: 150%; margin-left: 49.65pt; mso-add-space: auto; mso-list: l0 level3 lfo1; tab-stops: 14.2pt 21.3pt; text-align: justify; text-indent: -14.2pt;">
+<!--[if !supportLists]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">1.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Untuk
+megetahui </span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Sejarah dari Logic Fuzzy</span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">.<b><o:p></o:p></b></span></div>
+<div class="MsoListParagraphCxSpMiddle" style="line-height: 150%; margin-left: 49.65pt; mso-add-space: auto; mso-list: l0 level3 lfo1; tab-stops: 14.2pt 21.3pt; text-align: justify; text-indent: -14.2pt;">
+<!--[if !supportLists]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">2.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Untuk
+mengetahui </span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Perbedaan Logika Klasik atau Tegas dengan Logika Fuzzy</span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">.<b><o:p></o:p></b></span></div>
+<div class="MsoListParagraphCxSpMiddle" style="line-height: 150%; margin-left: 49.65pt; mso-add-space: auto; mso-list: l0 level3 lfo1; tab-stops: 14.2pt 21.3pt; text-align: justify; text-indent: -14.2pt;">
+<!--[if !supportLists]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">3.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Untuk
+mengetahui </span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Grafik Perbedaan Logika Logic Fuzzy dengan Logika Tegas</span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">.<b><o:p></o:p></b></span></div>
+<div class="MsoListParagraphCxSpLast" style="line-height: 150%; margin-left: 49.65pt; mso-add-space: auto; mso-list: l0 level3 lfo1; tab-stops: 14.2pt 21.3pt; text-align: justify; text-indent: -13.65pt;">
+<!--[if !supportLists]--><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">4.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; line-height: normal;">&nbsp;
+</span></span><!--[endif]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Untuk
+mengetahui </span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Alasan digunakannya Logika Fuzzy.</span><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;"><o:p></o:p></span></b></div>
+<div class="MsoNormal" style="margin-left: 35.45pt; text-align: justify;">
+<br></div>
+<div class="MsoNormal" style="margin-left: 35.45pt; text-align: justify;">
+<br></div>
+<div class="MsoNormal" style="margin-left: 35.45pt; text-align: justify;">
+<br></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">BAB II<o:p></o:p></span></b></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">PEMBAHASAN<o:p></o:p></span></b></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; mso-list: l2 level2 lfo3; text-indent: -36.0pt;">
+<!--[if !supportLists]--><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">2.1<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><!--[endif]--><b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">Sejarah
+Logic Fuzzy</span></b><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;"><o:p></o:p></span></b></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Sejarah Logika FuzzyFuzzy Set pertama
+kali diperkenalkan oleh Prof. Lotfi Zadeh, 1965 orang Iran yang menjadi guru besar
+di University of California at Berkeley dalam papernya yang monumental “Fuzzy
+Set”. Dalam paper tersebut dipaparkan ide dasar fuzzy set yang meliputi
+inclusion, union, intersection, complement, relation dan convexity.</span><br>
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12pt;">Lotfi
+Zadeh mengatakan Integrasi Logika Fuzzy kedalam sistem informasi dan rekayasa
+proses adalah menghasilkan aplikasi seperti sistem kontrol, alat alat rumah
+tangga, dan sistem pengambil keputusan yang lebih fleksibel, mantap, dan
+canggih dibandingkan dengan sistem konvensional. Dalam hal ini kami dapat
+mengatakan bahwa logika fuzzy memimpin dalam pengembangan kecerdasan mesin yang
+lebih tinggi ( machine Intelligency Quotient / MIQ ) Produk produk berikut
+telah menggunakan logika fuzzy dalam alat alat rumah tangga seperti mesin cuci,
+video dan kamera refleksi lensa tunggal, pendingin ruangan, oven microwave, dan
+banyak sistem diagnosa mandiri.</span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Fuzzy Logic merupakan kecerdasan buatan
+yang pertama kali dipublikasikan oleh Prof.Dr. Lotfi Zadeh yang berasal dari
+Pakistan. Melalui fuzzy logic ini sistem dapat membuat keputusan sendiri dan
+terkesan seperti memiliki perasaan, karena memiliki keputusan lain selain&nbsp; iya (logika 1) dan tidak (logika 0). Oleh
+karena itu fuzzy logic sangat berbeda jauh dari alur logaritma pemrogaman Sebagai
+contoh adalah robot yang menggunakan fuzzy logic dapat memprediksikan kapan ia
+harus bertindak atau menghindar saat ada halangan di depannya dengan hanya ada
+peringatan ‘awas’ dan tanpa ada hitungan matematis yang diberikan oleh user.
+Sedangkan robot yang menggunakan alogaritma pemrograman konvensional tidak akan
+dapat memutuskan sendiri untuk menghindar dari halangan yang ada di depannya.
+Logika Fuzzy, yang dalam bahasa Indonesia dapat diartikan sebagai Logika Kabur
+atau Logika Samar, dapat dikatakan sebagai “logika baru yang sudah lama”. Hal
+ini karena ilmu tentang logika fuzzy secara modern dan metodis ditemukan pada
+tahun 1965, namun konsep logika fuzzy sudah melekat pada diri manusia, sejak
+manusia ada. Konsep logika fuzzy dapat dengan mudah kita temukan pada perilaku
+manusia dalam kesehariannya.<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; mso-list: l2 level2 lfo3; text-indent: -36.0pt;">
+<!--[if !supportLists]--><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">2.2<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><!--[endif]--><b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">Perbedaan Logika Klasik atau Tegas
+dengan Logika Fuzzy</span></b><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;"><o:p></o:p></span></b></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify; text-indent: 36.0pt;">
+<span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Terdapat perbedaan mendasar antara logika klasik
+dengan logika fuzzy. Sebagai contoh, perhatikan dua kalimat perintah berikut
+ini: A. Pisahkan kelompok mahasiswa yang memiliki PC dan kelompok mahasiswa
+yang tidak memiliki PC. B. Buat kelompok mahasiswa yang pandai dan kelompok
+mahasiswa yang bodoh. Pada Kalimat-A,</span><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;"> </span><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Kita dapat membedakan secara tegas antara kelompok
+mahasiswa yang memiliki PC dengan kelompok mahasiswa yang tidak memiliki PC
+karena ada batasan yang nyata antara kedua kondisi tersebut. Namun Pada
+Kalimat-B,&nbsp; Tidak terdapat batasan yang
+nyata antara pandai dengan bodoh sehingga kita sulit membedakan mahasiswa yang
+pandai dengan mahasiswa yang bodoh.<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; mso-list: l2 level2 lfo3; text-indent: -36.0pt;">
+<!--[if !supportLists]--><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 16.0pt; line-height: 150%;">2.3<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; font-weight: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><!--[endif]--><b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">Ketidakjelasan</span></b><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 16.0pt; line-height: 150%;"><o:p></o:p></span></b></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify; text-indent: 36.0pt;">
+<span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Dalam kehidupan sehari-hari, kita
+sering menemui kondisi ketidakjelasan seperti kalimat-B. Ketidakjelasan yang
+kita alami, dapat kita kelompokkan menjadi: </span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;"><o:p></o:p></span></div>
+<div class="MsoListParagraph" style="line-height: 150%; margin-left: 90.0pt; mso-list: l1 level1 lfo4; text-align: justify; text-indent: -18.0pt;">
+<!--[if !supportLists]--><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">1.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Keambiguan
+(ambiguity)</span></b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">, terjadi karena suatu kata/istilah
+memiliki makna lebih dari satu. Contoh: bulan, maknanya adalah suatu benda
+langit, namun makna lainnya adalah bagian dari tahun. <o:p></o:p></span></div>
+<div class="MsoListParagraph" style="line-height: 150%; margin-left: 90.0pt; mso-list: l1 level1 lfo4; text-align: justify; text-indent: -18.0pt;">
+<!--[if !supportLists]--><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">2.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span></span><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Keacakan
+(randomness), </span></b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">karena hal yang kita inginkan belum
+terjadi. Contoh: besok akan hujan. <o:p></o:p></span></div>
+<div class="MsoListParagraph" style="line-height: 150%; margin-left: 90.0pt; mso-list: l1 level1 lfo4; text-align: justify; text-indent: -18.0pt;">
+<!--[if !supportLists]--><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">3.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span></span><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Ketidaktepatan
+(imprecision),</span></b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;"> disebabkan karena alat atau metode
+pengukuran yang tidak tepat. Contoh: volume bumi. <o:p></o:p></span></div>
+<div class="MsoListParagraph" style="line-height: 150%; margin-left: 90.0pt; mso-list: l1 level1 lfo4; text-align: justify; text-indent: -18.0pt;">
+<!--[if !supportLists]--><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">4.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; line-height: normal;">&nbsp; &nbsp; &nbsp; </span></span><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Ketidakjelasan
+akibat informasi yang tidak lengkap (incompleteness). </span></b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Contoh: ada kehidupan di luar angkasa. <o:p></o:p></span></div>
+<div class="MsoListParagraph" style="line-height: 150%; margin-left: 90.0pt; mso-list: l1 level1 lfo4; text-align: justify; text-indent: -18.0pt;">
+<!--[if !supportLists]--><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">5.<span style="font-family: &quot;times new roman&quot;; font-size: 7pt; font-stretch: normal; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]--><b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Kekaburan semantik</span></b><span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">, akibat suatu kata/istilah memiliki makna yang tidak dapat didefinisikan
+secara tegas. Contoh: cantik, pandai, dsb</span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;"><o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 35.45pt; text-align: justify; text-indent: 36.0pt;">
+<span lang="EN-US" style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Dari kelima kelompok ketidakjelasan
+tersebut, dapat dikatakan bahwa pembahasan logika fuzzy berada pada kekaburan
+semantik. Kekaburan semantik pasti ada dalam kehidupan manusia. Bahkan kita
+sering mengambil keputusan dari kondisi kekaburan semantik. (Kekaburan semantik
+adalah seperti yang sudah dijelaskan diatas bahwa kata//istilah memiliki makna
+yang tidak dapat didefinisikan secara tegas. Contoh: cantik, pandai, dsb) Hal
+lain yang juga perlu diperhatikan adalah kita (manusia) saat ini sering
+menggunakan alat bantu, terutama elektronik, untuk membuat suatu keputusan.
+Penelitian atau pengukuran umumnya memerlukan ketepatan &amp; kepastian.
+Sedangkan kondisi lingkungan, mengharuskan kita mengambil keputusan dari
+kekaburan semantik. Oleh karena itu, perlu bahasa keilmuan baru untuk
+mengakomodasi kekaburan semantik secara memadai.</span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;"><o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">2.4&nbsp;&nbsp;&nbsp;&nbsp; Grafik
+Perbedaan Logika Logic Fuzzy dengan Logika Tegas</span></b><b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;"><o:p></o:p></span></b></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Logika tegas memiliki nilai tidak=0.0
+dan ya =1.0 sedangkan logika fuzzy memiliki nilai 0.0 hingga 1.0 .secara grafik
+perbedaan antara logika tegas dan logika fuzzy ditunjukkan seperti grafik
+dibawah ini :<o:p></o:p></span></div>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://1.bp.blogspot.com/-jdkuy0r9_cU/WDrT9Hc9P5I/AAAAAAAAEr8/seM5bBP68Io6MESHEu8-qjAbwQ47sJrjACLcB/s1600/01.JPG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="197" src="./MAKALAH FUZZY LOGIC_files/01.JPG" width="320"></a></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36pt; text-align: center; text-indent: 36pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;"><br></span></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;"><!--[if gte vml 1]><v:shape id="Picture_x0020_3"
+ o:spid="_x0000_i1027" type="#_x0000_t75" style='width:195pt;height:120.75pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="file:///C:\Users\HANIFA~1\AppData\Local\Temp\msohtmlclip1\01\clip_image003.jpg"
+  o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;"><o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Didalam gambar 2.1.a apabila X leblh dan
+atau sama dengan 10 baru dikatakan benar yaitu bernilai Y1. sebaliknya nilai X
+yang kurang dan 10 adalah salah yaitu Y=0. Maka angka 9 atau 8 atau 7 dan
+sejenisnya adalah dikatakan salah.<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify; text-indent: 36.0pt;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Didalam gambar 2.1.b) nilai X = 9, atau
+8 atau 7 atau nilai antara 0 dan 10 adalah dikatakan ada benarnya dan ada juga
+salahnya. Dalam contoh kehidupan kita dikatakan seseorang dikatakan sudah
+dewasa apabila berumur lebih dari 17 tahun. maka sesiapapun yang kurang dari
+umur tersebut di dalam logika tegas akan dikatakan sebagai tidak dewasa atau
+anak-anak. Sedangkan dalam hal ini pada logika fuzzy umur dibawah 17 tahun
+dapat saja dikategorikan dewasa tapi tidak penuh. misal untuk umur 16 tahun
+atau 15 tahun atau 14 tahun atm 13 tahun. Secara grafik dapat digambarkan
+sebagai berikut:<o:p></o:p></span></div>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://3.bp.blogspot.com/-vNFkdojqQgg/WDrUChaWhTI/AAAAAAAAEsA/zpcBSnWjve8Y7Pf-GPs2F2Z-c7J_fk19wCLcB/s1600/02.JPG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="197" src="./MAKALAH FUZZY LOGIC_files/02.JPG" width="320"></a></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: center;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Salah satu jugan contoh pemetaan suatu
+input-output dalam bentuk grafis seperti terlihat pada Gambar 7.1. Gambar 7.1
+Contoh pemetaan input-output.</span><br>
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12pt; text-indent: 36pt;">1. Manajer pergudangan mengatakan pada manajer
+produksi seberapa banyak persediaan barang pada akhir minggu ini, kemudian
+manajer produksi akan menetapkan jumlah barang yang harus diproduksi esok hari.</span></div>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://3.bp.blogspot.com/-MF5aQpoPAH8/WDrUFgG3OqI/AAAAAAAAEsE/z9Lo-MsYv0EjzFjs8TwVUGSvdPs9_eTnACEw/s1600/03.JPG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="159" src="./MAKALAH FUZZY LOGIC_files/03.JPG" width="320"></a></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; margin-left: 7.1pt; text-align: center; text-indent: -7.1pt;">
+<br></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Contoh
+Pemetaan Input Output<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">2.5&nbsp;&nbsp;&nbsp;&nbsp; Alasan
+digunakannya Logika Fuzzy<o:p></o:p></span></b></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Ada beberapa alasan mengapa orang
+menggunakan logika fuzzy, antara lain: <o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">1. Konsep logika fuzzy mudah
+dimengerti. Konsep matematis yang mendasari penalaran fuzzy sangat sederhana
+dan mudah dimengerti.<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">2. Logika fuzzy sangat fleksibel. <o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">3. Logika fuzzy memiliki toleransi
+terhadap data-data yang tidak tepat. <o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 49.65pt; text-align: justify; text-indent: -13.65pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">4.
+Logika fuzzy mampu memodelkan fungsi-fungsi nonlinear yang sangat kompleks. <o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">5. Logika fuzzy dapat membangun dan
+mengaplikasikan <o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify; text-indent: 49.65pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">pengalamanpengalaman para pakar
+secara langsung tanpa harus melalui <o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify; text-indent: 49.65pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">proses pelatihan.<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 49.65pt; text-align: justify; text-indent: -13.65pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">6.
+Logika fuzzy dapat bekerjasama dengan teknik-teknik kendali secara
+konvensional.<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">7. Logika fuzzy didasarkan pada bahasa alami.<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">2.5&nbsp;&nbsp;&nbsp;&nbsp; Aplikasi yang
+menggunakan Logika Fuzzy<o:p></o:p></span></b></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 49.65pt; text-align: justify; text-indent: -13.65pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">1.
+Manajemen dan pengambilan keputusan, seperti manajemen basisdata yang
+didasarkan pada logika fuzzy, tata letak pabrik yang didasarkan pada logika
+fuzzy, sistem pembuat keputusan di militer yang didasarkan pada logika fuzzy,
+pembuatan games yang didasarkan pada logika fuzzy, dll. <o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 49.65pt; text-align: justify; text-indent: -13.65pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">2.
+Ekonomi, seperti pemodelan fuzzy pada sistem pemasaran yang kompleks, dll. <o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">3.. Klasifikasi dan pencocokan pola.
+<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 49.65pt; text-align: justify; text-indent: -13.65pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">4.
+Psikologi, seperti logika fuzzy untuk menganalisis kelakuan masyarakat,
+pencegahan dan investigasi kriminal, dll. <o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">5. Ilmu-ilmu sosial, terutam untuk
+pemodelan informasi yang tidak pasti. 6. Ilmu lingkungan, seperti kendali
+kualitas air, prediksi cuaca, dll.<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify; text-indent: 36.0pt;">
+<br></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">BAB III<o:p></o:p></span></b></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">PENUTUP<o:p></o:p></span></b></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">3.1 &nbsp;&nbsp;&nbsp; Kesimpulan <o:p></o:p></span></b></div>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify; text-indent: 36.0pt;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">Logika
+merupakan ilmu yang sangat penting untuk dipelajari, karena merupakan ilmu
+dasar bagi ilmu-ilmu yang lain. Hal ini dapat dilihat dari beberapa contoh yang
+dipaparkan di atas. Selain itu, logika juga merupakan ilmu untuk berpikir
+secara sistematis, sehingga mudah dipahami dan dapat dirunut kebenarannya.
+Logika juga sangat banyak digunakan pada dunia pemrograman, karena hampir
+setiap bahasa pemrograman menggunakan logika dalam pemecahan permasalahan dan
+setiap decision-nya. Oleh karena itu, sangat penting kiranya untuk mempelajari
+logika.<o:p></o:p></span></div>
+<div align="center" class="MsoNormal" style="line-height: 150%; text-align: center;">
+<br></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify;">
+<b><span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 14.0pt; line-height: 150%;">3.2 &nbsp;&nbsp;&nbsp; Saran<o:p></o:p></span></b><br>
+<div style="text-indent: 48px;">
+<span style="font-family: &quot;times new roman&quot; , serif;"><span style="font-size: 16px;">Beberapa saran yang dapat diberikan untuk pengembangan penelitian ini adalah:</span></span></div>
+<div style="text-indent: 48px;">
+<span style="font-family: &quot;times new roman&quot; , serif;"><span style="font-size: 16px;">1. &nbsp;Diperlukan pengembangan aplikasi lebih lanjut sehingga sistem pendukung keputusan &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dalam mengetahui spesifikasi komputer dengan metode lainnya dapat menjadi lebih baik &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lagi dan tampilannya pun tampak mendekati sempurna.</span></span></div>
+<div style="text-indent: 48px;">
+<span style="font-family: &quot;times new roman&quot; , serif;"><span style="font-size: 16px;">2. &nbsp;Menambahkan beberapa fitur-fitur dan fasilitas-fasilitas yang baru, yang sesuai dengan &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; perkembangan spesifikasi komputer saat ini.</span></span></div>
+<div style="text-indent: 48px;">
+<br></div>
+<span style="font-family: &quot;times&quot; , &quot;times new roman&quot; , serif; font-size: xx-small;"><b><br></b></span>
+<span style="font-family: &quot;times&quot; , &quot;times new roman&quot; , serif; font-size: xx-small;"><b>&nbsp;&nbsp;</b></span><br>
+<span style="font-size: 18.6667px;"><b><span style="font-family: &quot;times new roman&quot; , serif; line-height: 150%;"></span></b></span><br>
+<div style="text-align: center;">
+<span style="font-family: &quot;times new roman&quot; , serif;"><span style="font-size: 18.6667px;"><b>DAFTAR PUSTAKA</b></span></span></div>
+</div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">https://fahmizaleeits.wordpress.com/2010/04/09/sejarah-perkembangan-fuzzy-logic/</span></div>
+<div class="MsoNormal" style="line-height: 150%; text-align: justify;">
+<span style="font-family: &quot;times new roman&quot; , &quot;serif&quot;; font-size: 12.0pt; line-height: 150%;">http://ai-b-maragam.blogspot.com/p/tugas-ke-6.html
+http://www.scribd.com/doc/8569955/Makalah-Fuzzy-Logic-
+http://k12008.widyagama.ac.id/ai/diktatpdf/Logika_Fuzzy.pdf <o:p></o:p></span></div>
+<br>
+<div class="MsoNormal" style="line-height: 150%; margin-left: 36.0pt; text-align: justify; text-indent: 36.0pt;">
+<br></div>
+<div style="clear: both;"></div>
+</div>
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1"><span class="post-author vcard">
+Diposting oleh
+<span class="fn" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+<meta content="https://www.blogger.com/profile/16388910594925246354" itemprop="url">
+<a class="g-profile" href="https://www.blogger.com/profile/16388910594925246354" rel="author" title="author profile" data-gapiscan="true" data-onload="true" data-gapiattached="true">
+<span itemprop="name">hanifahawaliah</span>
+</a>
+</span>
+</span>
+<span class="post-timestamp">
+di
+<meta content="http://haniifahawaliah.blogspot.com/2016/11/makalah-fuzzy-logic.html" itemprop="url">
+<a class="timestamp-link" href="https://haniifahawaliah.blogspot.com/2016/11/makalah-fuzzy-logic.html" rel="bookmark" title="permanent link"><abbr class="published" itemprop="datePublished" title="2016-11-27T04:40:00-08:00">04.40</abbr></a>
+</span>
+<span class="post-comment-link">
+</span>
+<span class="post-icons">
+<span class="item-control blog-admin pid-13138643">
+<a href="https://www.blogger.com/post-edit.g?blogID=6167128099697048532&amp;postID=662761336813384291&amp;from=pencil" title="Edit Entri">
+<img alt="" class="icon-action" height="18" src="./MAKALAH FUZZY LOGIC_files/icon18_edit_allbkg.gif" width="18">
+</a>
+</span>
+</span>
+<div class="post-share-buttons goog-inline-block">
+<a class="goog-inline-block share-button sb-email" href="https://www.blogger.com/share-post.g?blogID=6167128099697048532&amp;postID=662761336813384291&amp;target=email" target="_blank" title="Kirimkan Ini lewat Email"><span class="share-button-link-text">Kirimkan Ini lewat Email</span></a><a class="goog-inline-block share-button sb-blog" href="https://www.blogger.com/share-post.g?blogID=6167128099697048532&amp;postID=662761336813384291&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a><a class="goog-inline-block share-button sb-twitter" href="https://www.blogger.com/share-post.g?blogID=6167128099697048532&amp;postID=662761336813384291&amp;target=twitter" target="_blank" title="Berbagi ke Twitter"><span class="share-button-link-text">Berbagi ke Twitter</span></a><a class="goog-inline-block share-button sb-facebook" href="https://www.blogger.com/share-post.g?blogID=6167128099697048532&amp;postID=662761336813384291&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Berbagi ke Facebook"><span class="share-button-link-text">Berbagi ke Facebook</span></a><a class="goog-inline-block share-button sb-pinterest" href="https://www.blogger.com/share-post.g?blogID=6167128099697048532&amp;postID=662761336813384291&amp;target=pinterest" target="_blank" title="Bagikan ke Pinterest"><span class="share-button-link-text">Bagikan ke Pinterest</span></a>
+</div>
+</div>
+<div class="post-footer-line post-footer-line-2"><span class="post-labels">
+</span>
+</div>
+<div class="post-footer-line post-footer-line-3"><span class="post-location">
+</span>
+</div>
+</div>
+</div>
+<div class="comments" id="comments">
+<a name="comments"></a>
+<h4>1 komentar:</h4>
+<div class="comments-content">
+<script async="async" src="https://haniifahawaliah.blogspot.com/2016/11/makalah-fuzzy-logic.html" type="text/javascript"></script>
+<script type="text/javascript">
+    (function() {
+      var items = null;
+      var msgs = null;
+      var config = {};
+
+// <![CDATA[
+      var cursor = null;
+      if (items && items.length > 0) {
+        cursor = parseInt(items[items.length - 1].timestamp) + 1;
+      }
+
+      var bodyFromEntry = function(entry) {
+        var text = (entry &&
+                    ((entry.content && entry.content.$t) ||
+                     (entry.summary && entry.summary.$t))) ||
+            '';
+        if (entry && entry.gd$extendedProperty) {
+          for (var k in entry.gd$extendedProperty) {
+            if (entry.gd$extendedProperty[k].name == 'blogger.contentRemoved') {
+              return '<span class="deleted-comment">' + text + '</span>';
+            }
+          }
+        }
+        return text;
+      }
+
+      var parse = function(data) {
+        cursor = null;
+        var comments = [];
+        if (data && data.feed && data.feed.entry) {
+          for (var i = 0, entry; entry = data.feed.entry[i]; i++) {
+            var comment = {};
+            // comment ID, parsed out of the original id format
+            var id = /blog-(\d+).post-(\d+)/.exec(entry.id.$t);
+            comment.id = id ? id[2] : null;
+            comment.body = bodyFromEntry(entry);
+            comment.timestamp = Date.parse(entry.published.$t) + '';
+            if (entry.author && entry.author.constructor === Array) {
+              var auth = entry.author[0];
+              if (auth) {
+                comment.author = {
+                  name: (auth.name ? auth.name.$t : undefined),
+                  profileUrl: (auth.uri ? auth.uri.$t : undefined),
+                  avatarUrl: (auth.gd$image ? auth.gd$image.src : undefined)
+                };
+              }
+            }
+            if (entry.link) {
+              if (entry.link[2]) {
+                comment.link = comment.permalink = entry.link[2].href;
+              }
+              if (entry.link[3]) {
+                var pid = /.*comments\/default\/(\d+)\?.*/.exec(entry.link[3].href);
+                if (pid && pid[1]) {
+                  comment.parentId = pid[1];
+                }
+              }
+            }
+            comment.deleteclass = 'item-control blog-admin';
+            if (entry.gd$extendedProperty) {
+              for (var k in entry.gd$extendedProperty) {
+                if (entry.gd$extendedProperty[k].name == 'blogger.itemClass') {
+                  comment.deleteclass += ' ' + entry.gd$extendedProperty[k].value;
+                } else if (entry.gd$extendedProperty[k].name == 'blogger.displayTime') {
+                  comment.displayTime = entry.gd$extendedProperty[k].value;
+                }
+              }
+            }
+            comments.push(comment);
+          }
+        }
+        return comments;
+      };
+
+      var paginator = function(callback) {
+        if (hasMore()) {
+          var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
+          if (cursor) {
+            url += '&published-min=' + new Date(cursor).toISOString();
+          }
+          window.bloggercomments = function(data) {
+            var parsed = parse(data);
+            cursor = parsed.length < 50 ? null
+                : parseInt(parsed[parsed.length - 1].timestamp) + 1
+            callback(parsed);
+            window.bloggercomments = null;
+          }
+          url += '&callback=bloggercomments';
+          var script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.src = url;
+          document.getElementsByTagName('head')[0].appendChild(script);
+        }
+      };
+      var hasMore = function() {
+        return !!cursor;
+      };
+      var getMeta = function(key, comment) {
+        if ('iswriter' == key) {
+          var matches = !!comment.author
+              && comment.author.name == config.authorName
+              && comment.author.profileUrl == config.authorUrl;
+          return matches ? 'true' : '';
+        } else if ('deletelink' == key) {
+          return config.baseUri + '/delete-comment.g?blogID='
+               + config.blogId + '&postID=' + comment.id;
+        } else if ('deleteclass' == key) {
+          return comment.deleteclass;
+        }
+        return '';
+      };
+
+      var replybox = null;
+      var replyUrlParts = null;
+      var replyParent = undefined;
+
+      var onReply = function(commentId, domId) {
+        if (replybox == null) {
+          // lazily cache replybox, and adjust to suit this style:
+          replybox = document.getElementById('comment-editor');
+          if (replybox != null) {
+            replybox.height = '250px';
+            replybox.style.display = 'block';
+            replyUrlParts = replybox.src.split('#');
+          }
+        }
+        if (replybox && (commentId !== replyParent)) {
+          replybox.src = '';
+          document.getElementById(domId).insertBefore(replybox, null);
+          replybox.src = replyUrlParts[0]
+              + (commentId ? '&parentID=' + commentId : '')
+              + '#' + replyUrlParts[1];
+          replyParent = commentId;
+        }
+      };
+
+      var hash = (window.location.hash || '#').substring(1);
+      var startThread, targetComment;
+      if (/^comment-form_/.test(hash)) {
+        startThread = hash.substring('comment-form_'.length);
+      } else if (/^c[0-9]+$/.test(hash)) {
+        targetComment = hash.substring(1);
+      }
+
+      // Configure commenting API:
+      var configJso = {
+        'maxDepth': config.maxThreadDepth
+      };
+      var provider = {
+        'id': config.postId,
+        'data': items,
+        'loadNext': paginator,
+        'hasMore': hasMore,
+        'getMeta': getMeta,
+        'onReply': onReply,
+        'rendered': true,
+        'initComment': targetComment,
+        'initReplyThread': startThread,
+        'config': configJso,
+        'messages': msgs
+      };
+
+      var render = function() {
+        if (window.goog && window.goog.comments) {
+          var holder = document.getElementById('comment-holder');
+          window.goog.comments.render(holder, provider);
+        }
+      };
+
+      // render now, or queue to render when library loads:
+      if (window.goog && window.goog.comments) {
+        render();
+      } else {
+        window.goog = window.goog || {};
+        window.goog.comments = window.goog.comments || {};
+        window.goog.comments.loadQueue = window.goog.comments.loadQueue || [];
+        window.goog.comments.loadQueue.push(render);
+      }
+    })();
+// ]]>
+  </script>
+<div id="comment-holder">
+<div class="comment-thread toplevel-thread"><ol id="top-ra"><li class="comment" id="c306031420351647385"><div class="avatar-image-container"><img src="./MAKALAH FUZZY LOGIC_files/unnamed(1).png" alt=""></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="https://www.blogger.com/profile/01150887234140674518" rel="nofollow">Unknown</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://haniifahawaliah.blogspot.com/2016/11/makalah-fuzzy-logic.html?showComment=1556559310759#c306031420351647385">29 April 2019 10.35</a></span></div><p class="comment-content">thanks<br></p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="306031420351647385" href="javascript:;">Balas</a><span class="item-control blog-admin blog-admin pid-65286329"><a target="_self" href="https://www.blogger.com/delete-comment.g?blogID=6167128099697048532&amp;postID=306031420351647385">Hapus</a></span></span></div><div class="comment-replies"><div id="c306031420351647385-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self" href="javascript:;">Balasan</a></span></span><ol id="c306031420351647385-ra" class="thread-chrome thread-expanded"><div></div><div id="c306031420351647385-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="306031420351647385" href="javascript:;">Balas</a></div></ol></div></div><div class="comment-replybox-single" id="c306031420351647385-ce"></div></li></ol><div id="top-continue" class="continue hidden"><a class="comment-reply" target="_self" href="javascript:;">Tambahkan komentar</a></div><div class="comment-replybox-thread" id="top-ce"><iframe allowtransparency="true" class="blogger-iframe-colorize blogger-comment-from-post" frameborder="0" height="194px" id="comment-editor" name="comment-editor" src="./MAKALAH FUZZY LOGIC_files/comment-iframe.html" width="100%" style="display: block;" data-resized="true"></iframe></div><div class="loadmore hidden" data-post-id="662761336813384291"><a target="_self">Muat yang lain...</a></div></div>
+</div>
+</div>
+<p class="comment-footer">
+</p><div class="comment-form">
+<a name="comment-form"></a>
+<p>
+</p>
+<a href="https://www.blogger.com/comment-iframe.g?blogID=6167128099697048532&amp;postID=662761336813384291&amp;blogspotRpcToken=4617321" id="comment-editor-src"></a>
+
+<script src="./MAKALAH FUZZY LOGIC_files/1479000943-comment_from_post_iframe.js.download" type="text/javascript"></script>
+<script type="text/javascript">
+      BLOG_CMT_createIframe('https://www.blogger.com/rpc_relay.html');
+    </script>
+</div>
+<p></p>
+<div id="backlinks-container">
+<div id="Blog1_backlinks-container">
+</div>
+</div>
+</div>
+</div>
+
+        </div></div>
+      
+</div>
+<div class="blog-pager" id="blog-pager">
+<span id="blog-pager-newer-link">
+<a class="blog-pager-newer-link" href="https://haniifahawaliah.blogspot.com/2017/03/peng-animasi-desain-grafis-pengertian.html" id="Blog1_blog-pager-newer-link" title="Posting Lebih Baru">Posting Lebih Baru</a>
+</span>
+<span id="blog-pager-older-link">
+<a class="blog-pager-older-link" href="https://haniifahawaliah.blogspot.com/2016/11/teknologi-canggih-jetpack.html" id="Blog1_blog-pager-older-link" title="Posting Lama">Posting Lama</a>
+</span>
+<a class="home-link" href="https://haniifahawaliah.blogspot.com/">Beranda</a>
+</div>
+<div class="clear"></div>
+<div class="post-feeds">
+<div class="feed-links">
+Langganan:
+<a class="feed-link" href="https://haniifahawaliah.blogspot.com/feeds/662761336813384291/comments/default" target="_blank" type="application/atom+xml">Posting Komentar (Atom)</a>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="column-left-outer">
+<div class="column-left-inner">
+<aside>
+</aside>
+</div>
+</div>
+<div class="column-right-outer">
+<div class="column-right-inner">
+<aside>
+<div class="sidebar section" id="sidebar-right-1"><div class="widget Image" data-version="1" id="Image1">
+<h2>UNIVERSITAS GUNADARMA</h2>
+<div class="widget-content">
+<img alt="UNIVERSITAS GUNADARMA" height="240" id="Image1_img" src="./MAKALAH FUZZY LOGIC_files/logo gundar real(1).png" width="240" style="visibility: visible;">
+<br>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="https://www.blogger.com/rearrange?blogID=6167128099697048532&amp;widgetType=Image&amp;widgetId=Image1&amp;action=editWidget&amp;sectionId=sidebar-right-1" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Image1&quot;));" rel="nofollow" target="configImage1" title="Edit">
+<img alt="" height="18" src="./MAKALAH FUZZY LOGIC_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget PopularPosts" data-version="1" id="PopularPosts1">
+<h2>Popular Posts</h2>
+<div class="widget-content popular-posts">
+<ul>
+<li>
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="https://haniifahawaliah.blogspot.com/2016/11/makalah-fuzzy-logic.html" target="_blank">
+<img alt="" border="0" src="./MAKALAH FUZZY LOGIC_files/logo gundar real(2).png">
+</a>
+</div>
+<div class="item-title"><a href="https://haniifahawaliah.blogspot.com/2016/11/makalah-fuzzy-logic.html">MAKALAH FUZZY LOGIC</a></div>
+<div class="item-snippet">  MAKALAH   KECERDASAN BUATAN FUZZY LOGIC     Diajukan S ebagai T ugas M ata Kuliah   Pengantar Teknologi Sistem Cerdas     Dosen :   Ibu Ee...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li>
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="https://haniifahawaliah.blogspot.com/2016/11/teknologi-canggih-jetpack.html" target="_blank">
+<img alt="" border="0" src="./MAKALAH FUZZY LOGIC_files/fotofoto.jpg">
+</a>
+</div>
+<div class="item-title"><a href="https://haniifahawaliah.blogspot.com/2016/11/teknologi-canggih-jetpack.html">Teknologi Canggih (JETPACK)</a></div>
+<div class="item-snippet">  JETPACK             &nbsp; Menurut perusahaan bernama Martin Aircraft tersebut, jetpack buatan mereka dapat mencapai kecepatan 70 kilometer per...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li>
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="https://haniifahawaliah.blogspot.com/2018/04/etika-profesionalisme-tsi-jenis-ancaman.html" target="_blank">
+<img alt="" border="0" src="./MAKALAH FUZZY LOGIC_files/logo gundar real(3).png">
+</a>
+</div>
+<div class="item-title"><a href="https://haniifahawaliah.blogspot.com/2018/04/etika-profesionalisme-tsi-jenis-ancaman.html">ETIKA &amp; PROFESIONALISME TSI : JENIS ANCAMAN ( TRAPDOOR dan BACTERIA)</a></div>
+<div class="item-snippet">    ETIKA &amp; PROFESIONALISME TSI       &nbsp;      Nama :   Hanifah Awaliah &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (14114158)   Kelas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  4 KA 1 3   Dosen &nbsp;&nbsp;&nbsp;&nbsp;...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li>
+<div class="item-content">
+<div class="item-title"><a href="https://haniifahawaliah.blogspot.com/2016/10/tugas-softskill-teknologi-terkini_9.html">TUGAS SOFTSKILL (TEKNOLOGI TERKINI)</a></div>
+<div class="item-snippet">     PENGANTAR TEKNOLOGI SISTEM CERDAS   Mobil Tanpa Pengemudi       Disusun Oleh Kelompok 2 &nbsp; &nbsp;:     Desti Nurismawati&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 121...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li>
+<div class="item-content">
+<div class="item-title"><a href="https://haniifahawaliah.blogspot.com/2018/07/bahasa-inggris-bisnis-2-tugas-4.html">BAHASA INGGRIS BISNIS 2 : TUGAS 4</a></div>
+<div class="item-snippet"> TOEFL EXERCISE 4     CHOOSE THE INCORRECT  ANSWER! Give correction  and also give the explanation.      None      of  the students in this ...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li>
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="https://haniifahawaliah.blogspot.com/2018/04/etika-profesionalisme-tsi-sikap.html" target="_blank">
+<img alt="" border="0" src="./MAKALAH FUZZY LOGIC_files/logo gundar real(3).png">
+</a>
+</div>
+<div class="item-title"><a href="https://haniifahawaliah.blogspot.com/2018/04/etika-profesionalisme-tsi-sikap.html">ETIKA &amp; PROFESIONALISME TSI : sikap profesionalisme yang berkaitan dengan pemanfaatan teknologi sistem informasi</a></div>
+<div class="item-snippet"> ETIKA &amp; PROFESIONALISME TSI       &nbsp;      Nama :   Hanifah Awaliah &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (14114158)   Kelas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  4 KA 1 3   Dosen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li>
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="https://haniifahawaliah.blogspot.com/2014/09/algoritma-dan-pemrograman.html" target="_blank">
+<img alt="" border="0" src="./MAKALAH FUZZY LOGIC_files/unnamed.jpg">
+</a>
+</div>
+<div class="item-title"><a href="https://haniifahawaliah.blogspot.com/2014/09/algoritma-dan-pemrograman.html">Algoritma dan Pemrograman</a></div>
+<div class="item-snippet">  &nbsp;   Apakah Itu Algoritma     &nbsp; Ditinjau dari asal-usul katanya, kata Algoritma sendiri mempunyai sejarah yang aneh. Orang hanya menemukan ...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li>
+<div class="item-content">
+<div class="item-title"><a href="https://haniifahawaliah.blogspot.com/2018/07/etika-dan-profesionalisme-tsi.html">ETIKA DAN PROFESIONALISME TSI : HAK CIPTA</a></div>
+<div class="item-snippet"> NAMA&nbsp;&nbsp; : Hanifah Awaliah   NPM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 14114758   KELAS&nbsp; : 4KA13     Hasil karya seseorang perlu dilindungi, agar tidak diplagiat oleh orang...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li>
+<div class="item-content">
+<div class="item-title"><a href="https://haniifahawaliah.blogspot.com/2016/05/itsm-lifecycle_29.html">ITSM lifecycle</a></div>
+<div class="item-snippet"> ITSM &nbsp;lifecycle       NAMA : HANIFAH AWALIAH      NPM : 14114758   KELAS : 2 KA 13     Pengertian ITSM &nbsp;   Suatu metode pengelolaan sistem ...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li>
+<div class="item-content">
+<div class="item-title"><a href="https://haniifahawaliah.blogspot.com/2015/01/ilmu-pengetahuan-teknologi-dan.html">ILMU PENGETAHUAN TEKNOLOGI DAN KEMISKINAN</a></div>
+<div class="item-snippet"> PENGERTIAN ILMU TEKNOLOGI DAN KEMISKINAN     &nbsp;&nbsp; IPTEK adalah akronim dai Ilmu Pengetahuan dan Teknologi. Yang dimaksud dengan atau pengerti...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="https://www.blogger.com/rearrange?blogID=6167128099697048532&amp;widgetType=PopularPosts&amp;widgetId=PopularPosts1&amp;action=editWidget&amp;sectionId=sidebar-right-1" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;PopularPosts1&quot;));" rel="nofollow" target="configPopularPosts1" title="Edit">
+<img alt="" height="18" src="./MAKALAH FUZZY LOGIC_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div>
+<div class="widget LinkList" data-version="1" id="LinkList1">
+<h2>UNIVERSITAS GUNADARMA</h2>
+<div class="widget-content">
+<ul>
+<li><a href="http://baak.gunadarma.ac.id/">baak</a></li>
+<li><a href="http://ilab.gunadarma.ac.id/">ilab</a></li>
+<li><a href="http://library.gunadarma.ac.id/">library</a></li>
+<li><a href="http://staff.gunadarma.ac.id/">staff</a></li>
+<li><a href="http://studentsite.gunadarma.ac.id/">studentsite</a></li>
+<li><a href="http://v-class.gunadarma.ac.id/">v-class</a></li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="https://www.blogger.com/rearrange?blogID=6167128099697048532&amp;widgetType=LinkList&amp;widgetId=LinkList1&amp;action=editWidget&amp;sectionId=sidebar-right-1" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;LinkList1&quot;));" rel="nofollow" target="configLinkList1" title="Edit">
+<img alt="" height="18" src="./MAKALAH FUZZY LOGIC_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div></div>
+<table border="0" cellpadding="0" cellspacing="0" class="section-columns columns-2">
+<tbody>
+<tr>
+<td class="first columns-cell">
+<div class="sidebar no-items section" id="sidebar-right-2-1">
+</div>
+</td>
+<td class="columns-cell">
+<div class="sidebar section" id="sidebar-right-2-2"><div class="widget Profile" data-version="1" id="Profile1">
+<h2>About Me</h2>
+<div class="widget-content">
+<dl class="profile-datablock">
+<dt class="profile-data">
+<a class="profile-name-link g-profile" href="https://www.blogger.com/profile/16388910594925246354" rel="author" style="background-image: url(//www.blogger.com/img/logo-16.png);" data-gapiscan="true" data-onload="true" data-gapiattached="true">
+hanifahawaliah
+</a>
+</dt>
+</dl>
+<a class="profile-link" href="https://www.blogger.com/profile/16388910594925246354" rel="author">Lihat profil lengkapku</a>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="https://www.blogger.com/rearrange?blogID=6167128099697048532&amp;widgetType=Profile&amp;widgetId=Profile1&amp;action=editWidget&amp;sectionId=sidebar-right-2-2" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Profile1&quot;));" rel="nofollow" target="configProfile1" title="Edit">
+<img alt="" height="18" src="./MAKALAH FUZZY LOGIC_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sidebar section" id="sidebar-right-3"><div class="widget BlogArchive" data-version="1" id="BlogArchive1">
+<h2>Blog</h2>
+<div class="widget-content">
+<div id="ArchiveList">
+<div id="BlogArchive1_ArchiveList">
+<ul class="flat">
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2018/07/">Juli</a> (2)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2018/05/">Mei</a> (1)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2018/04/">April</a> (5)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2017/07/">Juli</a> (1)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2017/04/">April</a> (6)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2017/03/">Maret</a> (5)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2016/11/">November</a> (2)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2016/10/">Oktober</a> (1)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2016/05/">Mei</a> (2)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2016/03/">Maret</a> (2)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2015/06/">Juni</a> (1)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2015/05/">Mei</a> (1)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2015/04/">April</a> (1)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2015/03/">Maret</a> (1)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2015/01/">Januari</a> (2)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2014/12/">Desember</a> (1)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2014/11/">November</a> (1)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2014/10/">Oktober</a> (1)
+      </li>
+<li class="archivedate">
+<a href="https://haniifahawaliah.blogspot.com/2014/09/">September</a> (3)
+      </li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="https://www.blogger.com/rearrange?blogID=6167128099697048532&amp;widgetType=BlogArchive&amp;widgetId=BlogArchive1&amp;action=editWidget&amp;sectionId=sidebar-right-3" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;BlogArchive1&quot;));" rel="nofollow" target="configBlogArchive1" title="Edit">
+<img alt="" height="18" src="./MAKALAH FUZZY LOGIC_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div></div>
+</aside>
+</div>
+</div>
+</div>
+<div style="clear: both"></div>
+<!-- columns -->
+</div>
+<!-- main -->
+</div>
+</div>
+<div class="main-cap-bottom cap-bottom">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+</div>
+<footer>
+<div class="footer-outer">
+<div class="footer-cap-top cap-top">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+<div class="fauxborder-left footer-fauxborder-left">
+<div class="fauxborder-right footer-fauxborder-right"></div>
+<div class="region-inner footer-inner">
+<div class="foot no-items section" id="footer-1"></div>
+<table border="0" cellpadding="0" cellspacing="0" class="section-columns columns-2">
+<tbody>
+<tr>
+<td class="first columns-cell">
+<div class="foot no-items section" id="footer-2-1"></div>
+</td>
+<td class="columns-cell">
+<div class="foot no-items section" id="footer-2-2"></div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- outside of the include in order to lock Attribution widget -->
+<div class="foot section" id="footer-3"><div class="widget Attribution" data-version="1" id="Attribution1">
+<div class="widget-content" style="text-align: center;">
+Tema Perjalanan. Gambar tema oleh <a href="http://www.istockphoto.com/googleimages.php?id=8706225&amp;platform=blogger&amp;langregion=in" target="_blank">latex</a>. Diberdayakan oleh <a href="https://www.blogger.com/" target="_blank">Blogger</a>.
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="https://www.blogger.com/rearrange?blogID=6167128099697048532&amp;widgetType=Attribution&amp;widgetId=Attribution1&amp;action=editWidget&amp;sectionId=footer-3" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Attribution1&quot;));" rel="nofollow" target="configAttribution1" title="Edit">
+<img alt="" height="18" src="./MAKALAH FUZZY LOGIC_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div>
+</div>
+</div>
+<div class="footer-cap-bottom cap-bottom">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+</div>
+</footer>
+<!-- content -->
+</div>
+</div>
+<div class="content-cap-bottom cap-bottom">
+<div class="cap-left"></div>
+<div class="cap-right"></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+    window.setTimeout(function() {
+        document.body.className = document.body.className.replace('loading', '');
+      }, 10);
+  </script>
+<script src="./MAKALAH FUZZY LOGIC_files/plusone.js.download" type="text/javascript" gapi_processed="true"></script>
+
+<script type="text/javascript" src="./MAKALAH FUZZY LOGIC_files/2488788848-widgets.js.download"></script>
+<script type="text/javascript">
+window['__wavt'] = 'AOuZoY5H2MJjPW6xn36t2KPR_xr4PZ7uLQ:1577446835408';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d6167128099697048532','//haniifahawaliah.blogspot.com/2016/11/makalah-fuzzy-logic.html','6167128099697048532');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '6167128099697048532', 'title': 'Hanifah Awaliah BLOG', 'url': 'https://haniifahawaliah.blogspot.com/2016/11/makalah-fuzzy-logic.html', 'canonicalUrl': 'http://haniifahawaliah.blogspot.com/2016/11/makalah-fuzzy-logic.html', 'homepageUrl': 'https://haniifahawaliah.blogspot.com/', 'searchUrl': 'https://haniifahawaliah.blogspot.com/search', 'canonicalHomepageUrl': 'http://haniifahawaliah.blogspot.com/', 'blogspotFaviconUrl': 'https://haniifahawaliah.blogspot.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'id', 'localeUnderscoreDelimited': 'id', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Hanifah Awaliah BLOG - Atom\x22 href\x3d\x22https://haniifahawaliah.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22Hanifah Awaliah BLOG - RSS\x22 href\x3d\x22https://haniifahawaliah.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Hanifah Awaliah BLOG - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/6167128099697048532/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Hanifah Awaliah BLOG - Atom\x22 href\x3d\x22https://haniifahawaliah.blogspot.com/feeds/662761336813384291/comments/default\x22 /\x3e\n', 'meTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': false, 'ieCssRetrofitLinks': '\x3c!--[if IE]\x3e\x3cscript type\x3d\x22text/javascript\x22 src\x3d\x22https://www.blogger.com/static/v1/jsbin/1270012344-ieretrofit.js\x22\x3e\x3c/script\x3e\n\x3c![endif]--\x3e', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/65f5893685eb089d', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'disableGComments': true, 'sharing': {'platforms': [{'name': 'Dapatkan link', 'key': 'link', 'shareMessage': 'Dapatkan link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Bagikan ke Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Bagikan ke Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Bagikan ke Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 300, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27id\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Baca selengkapnya', 'pageType': 'item', 'postId': '662761336813384291', 'postImageThumbnailUrl': 'https://2.bp.blogspot.com/-71TrhCEd_ak/WDrTMA2JqMI/AAAAAAAAEr4/toqomWF3iqYlSsvINZuq1tI1zYg_ZQb3ACLcB/s72-c/logo%2Bgundar%2Breal.png', 'postImageUrl': 'https://2.bp.blogspot.com/-71TrhCEd_ak/WDrTMA2JqMI/AAAAAAAAEr4/toqomWF3iqYlSsvINZuq1tI1zYg_ZQb3ACLcB/s200/logo%2Bgundar%2Breal.png', 'pageName': 'MAKALAH FUZZY LOGIC', 'pageTitle': 'Hanifah Awaliah BLOG: MAKALAH FUZZY LOGIC'}}, {'name': 'features', 'data': {'sharing_get_link_dialog': 'true', 'sharing_native': 'false'}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Tautan disalin ke papan klip!', 'ok': 'Oke', 'postLink': 'Tautan Pos'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Khusus', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true, 'variant': 'studio', 'variantId': 'studio'}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'MAKALAH FUZZY LOGIC', 'description': '  MAKALAH   KECERDASAN BUATAN FUZZY LOGIC     Diajukan S ebagai T ugas M ata Kuliah   Pengantar Teknologi Sistem Cerdas     Dosen :   Ibu Ee...', 'featuredImage': 'https://2.bp.blogspot.com/-71TrhCEd_ak/WDrTMA2JqMI/AAAAAAAAEr4/toqomWF3iqYlSsvINZuq1tI1zYg_ZQb3ACLcB/s200/logo%2Bgundar%2Breal.png', 'url': 'https://haniifahawaliah.blogspot.com/2016/11/makalah-fuzzy-logic.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'postId': 662761336813384291}}]);
+_WidgetManager._RegisterWidget('_NavbarView', new _WidgetInfo('Navbar1', 'navbar', document.getElementById('Navbar1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/3596687072-lbx.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/368954415-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ImageView', new _WidgetInfo('Image1', 'sidebar-right-1', document.getElementById('Image1'), {'resize': true}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPosts1', 'sidebar-right-1', document.getElementById('PopularPosts1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList1', 'sidebar-right-1', document.getElementById('LinkList1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ProfileView', new _WidgetInfo('Profile1', 'sidebar-right-2-2', document.getElementById('Profile1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebar-right-3', document.getElementById('BlogArchive1'), {'languageDirection': 'ltr', 'loadingMessage': 'Memuat\x26hellip;'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AttributionView', new _WidgetInfo('Attribution1', 'footer-3', document.getElementById('Attribution1'), {}, 'displayModeFull'));
+</script>
+
+</body></html>
